@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graduation — Middlesex University Dubai</title>
+<style>
+:root{
+  --maroon:#7A1128;
+  --maroon-dark:#530C1B;
+  --maroon-light:#9C2F45;
+  --gold:#C9A227;
+  --gold-light:#E8D488;
+  --cream:#FAF7F1;
+  --ink:#1C1A17;
+  --ink-soft:#5B5347;
+  --success:#2F7D4F;
+  --success-bg:#EAF5EE;
+  --alert:#B3261E;
+  --alert-bg:#FBEAE8;
+  --info:#1F3A5F;
+  --info-bg:#EAF0F6;
+  --surface:#FFFFFF;
+  --line:#E5DFD3;
+  --warn-bg:#FCF3E3;
+  --warn:#946200;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.5;
+}
+.serif{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;}
+h1,h2,h3{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;}
+.wrap{max-width:1020px;margin:0 auto;padding:0 24px;}
+
+/* ===== TOP UTILITY BAR ===== */
+.util-bar{background:var(--maroon-dark);color:#EDE3D3;padding:7px 0;font-size:11.5px;}
+.util-bar .wrap{display:flex;justify-content:flex-end;gap:18px;}
+.util-bar a{color:#EDE3D3;text-decoration:none;font-weight:600;letter-spacing:0.3px;}
+.util-bar a:hover{color:var(--gold-light);}
+
+/* ===== HERO ===== */
+.hero{
+  background:linear-gradient(135deg,var(--maroon) 0%,var(--maroon-dark) 100%);
+  color:#fff;
+  border-bottom:4px solid var(--gold);
+  padding:34px 0 40px;
+}
+.hero .wrap{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.hero-text .eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-light);margin-bottom:6px;}
+.hero-text h1{font-size:44px;font-weight:700;letter-spacing:1px;line-height:1;margin-bottom:6px;}
+.hero-text h2{font-size:19px;font-weight:400;color:#F0E6D2;margin-bottom:3px;}
+.hero-text h3{font-size:15px;font-weight:400;color:var(--gold-light);letter-spacing:0.5px;}
+.mdx-logo-box{
+  flex-shrink:0;background:#fff;border-radius:6px;border:2px solid var(--gold);
+  padding:8px 10px;display:flex;align-items:center;
+}
+.mdx-logo-box img{display:block;width:172px;height:auto;}
+
+/* ===== INFO STRIP ===== */
+.info-strip{background:var(--surface);border-bottom:1px solid var(--line);}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;}
+.info-item{padding:22px 24px;border-right:1px solid var(--line);}
+.info-item:last-child{border-right:none;}
+.info-item .lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-weight:700;margin-bottom:6px;}
+.info-item .val{font-size:16px;font-weight:700;color:var(--maroon);font-family:Georgia,serif;}
+.info-item .sub{font-size:12px;color:var(--ink-soft);margin-top:3px;}
+
+.feb-notice{
+  background:#FBF9F4;border:1px dashed var(--gold);border-radius:5px;
+  padding:11px 16px;font-size:12px;color:var(--ink-soft);text-align:center;margin:16px 0;
+}
+.feb-notice strong{color:var(--maroon);}
+
+/* ===== SECTION LAYOUT ===== */
+.section{padding:44px 0;}
+.section.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.section-head{text-align:center;margin-bottom:26px;}
+.section-head .eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px;}
+.section-head h2{font-size:26px;color:var(--maroon);}
+.section-head p.desc{font-size:13px;color:var(--ink-soft);max-width:560px;margin:8px auto 0;}
+
+/* ===== TICKET FLOW CARD ===== */
+.portal-shell{max-width:480px;margin:0 auto;}
+.window-banner{background:var(--info-bg);border:1px solid #C7D6E5;border-radius:6px;padding:12px 16px;font-size:12.5px;color:var(--info);text-align:center;margin-bottom:18px;}
+.window-banner strong{color:var(--maroon);}
+.price-ref{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:22px;}
+.price-ref .pr-item{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:5px;padding:12px 8px;text-align:center;}
+.price-ref .pr-item .pr-lbl{font-size:10px;text-transform:uppercase;letter-spacing:0.4px;color:var(--ink-soft);font-weight:700;margin-bottom:5px;}
+.price-ref .pr-item .pr-val{font-size:17px;font-weight:700;color:var(--maroon);font-family:Georgia,serif;}
+@media(max-width:600px){.price-ref{grid-template-columns:repeat(2,1fr);}}
+
+.portal-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:34px;box-shadow:0 6px 28px rgba(122,17,40,0.08);}
+.portal-header{text-align:center;margin-bottom:24px;}
+.seal{
+  width:56px;height:56px;border-radius:50%;margin:0 auto 12px;
+  border:2px solid var(--gold);background:var(--maroon);
+  display:flex;align-items:center;justify-content:center;
+  font-family:Georgia,serif;color:var(--gold);font-size:22px;font-weight:700;
+}
+.portal-header h1{font-size:21px;color:var(--maroon);margin-bottom:4px;}
+.portal-header p{font-size:12.5px;color:var(--ink-soft);}
+.divider{height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);margin:18px 0;}
+.demo-note{margin-top:20px;padding:13px;background:#FBF9F4;border:1px dashed var(--line);border-radius:5px;font-size:11.5px;color:var(--ink-soft);}
+.demo-note strong{color:var(--maroon);}
+.demo-note p{margin-top:3px;}
+.ceremony-chip{display:inline-block;background:var(--gold);color:var(--maroon-dark);font-weight:700;padding:4px 12px;border-radius:4px;font-size:12.5px;}
+.ticket-row{display:flex;align-items:center;justify-content:space-between;border:1.5px solid var(--line);border-radius:5px;padding:13px 15px;margin-bottom:10px;cursor:pointer;transition:border-color .15s;}
+.ticket-row:hover{border-color:var(--maroon);}
+.ticket-row.locked{opacity:0.55;cursor:not-allowed;}
+.ticket-row .t-name{font-weight:700;}
+.ticket-row .t-price{color:var(--ink-soft);font-size:12px;margin-top:2px;}
+.order-total{display:flex;justify-content:space-between;padding-top:12px;margin-top:8px;border-top:2px solid var(--gold);font-weight:700;font-size:16px;color:var(--maroon);}
+.kv-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;font-size:12.5px;margin-bottom:8px;}
+.kv-grid .k{color:var(--ink-soft);}
+.kv-grid .v{font-weight:700;}
+
+/* ===== SHARED FORM ELEMENTS ===== */
+label{display:block;font-size:12px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;}
+input[type=text],input[type=number],input[type=email],select,textarea{
+  width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:4px;
+  font-size:14px;font-family:inherit;background:#fff;color:var(--ink);
+}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--maroon);box-shadow:0 0 0 3px rgba(122,17,40,0.1);}
+.field{margin-bottom:16px;}
+button{padding:11px 18px;border:none;border-radius:4px;font-size:13px;font-weight:700;letter-spacing:0.4px;cursor:pointer;transition:all .15s;font-family:inherit;}
+.btn-primary{background:var(--maroon);color:#fff;}
+.btn-primary:hover{background:var(--maroon-dark);}
+.btn-gold{background:var(--gold);color:var(--maroon-dark);}
+.btn-gold:hover{background:#B08F1F;}
+.btn-success{background:var(--success);color:#fff;}
+.btn-success:hover{background:#256640;}
+.btn-outline{background:transparent;color:var(--maroon);border:1.5px solid var(--maroon);}
+.btn-outline:hover{background:var(--maroon);color:#fff;}
+.btn-sm{padding:7px 12px;font-size:11px;}
+.btn-block{width:100%;}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;}
+.banner{padding:13px 16px;border-radius:5px;margin-bottom:16px;font-size:13px;line-height:1.65;border-left:4px solid;}
+.banner.success{background:var(--success-bg);border-color:var(--success);color:#1b5236;}
+.banner.alert{background:var(--alert-bg);border-color:var(--alert);color:#7a1a14;font-weight:500;}
+.banner.info{background:var(--info-bg);border-color:var(--info);color:#152A44;}
+.banner.warn{background:var(--warn-bg);border-color:var(--gold);color:var(--warn);}
+.banner a{color:inherit;font-weight:700;text-decoration:underline;}
+small.hint{display:block;color:var(--ink-soft);font-size:11px;margin-top:5px;}
+
+/* ===== DETAILS SECTION ===== */
+.detail-stack{display:flex;flex-direction:column;gap:20px;}
+.detail-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px 24px;}
+.detail-card h3{color:var(--maroon);font-size:16px;margin-bottom:14px;}
+.detail-card h4{color:var(--ink);font-size:13px;margin:14px 0 8px;text-transform:uppercase;letter-spacing:0.4px;}
+.detail-card p{font-size:13px;color:var(--ink-soft);margin-bottom:8px;line-height:1.65;}
+table.split-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+table.split-table th{background:var(--maroon);color:#fff;padding:8px 10px;text-align:left;font-weight:700;}
+table.split-table td{padding:8px 10px;border-bottom:1px solid var(--line);}
+.ceremony-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+@media(max-width:700px){.ceremony-groups{grid-template-columns:1fr;}}
+.cgroup{background:#FBF9F4;border:1px solid var(--line);border-radius:6px;padding:14px 16px;}
+.cgroup .cg-title{font-weight:700;color:var(--maroon);font-size:13px;margin-bottom:8px;}
+.cgroup ul{list-style:none;font-size:12px;color:var(--ink-soft);}
+.cgroup li{padding:3px 0;}
+.mind-list{list-style:none;}
+.mind-list li{padding:9px 0;border-bottom:1px solid var(--line);font-size:13px;padding-left:22px;position:relative;}
+.mind-list li:last-child{border-bottom:none;}
+.mind-list li::before{content:"—";position:absolute;left:0;color:var(--gold);font-weight:700;}
+.notice-box{background:var(--warn-bg);border:1px solid var(--gold);border-radius:6px;padding:16px 18px;font-size:12.5px;color:var(--warn);line-height:1.65;}
+
+.footer{background:var(--maroon-dark);color:#C9BBA6;padding:22px 0;text-align:center;font-size:11.5px;}
+
+.identity-bar{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:11px 16px;margin-bottom:16px;flex-wrap:wrap;}
+.identity-bar label{margin:0;}
+.identity-bar select{width:auto;min-width:240px;}
+.identity-bar .id-note{font-size:11.5px;color:var(--ink-soft);}
+
+.dash-section{margin-top:30px;}
+.dash-section-head{margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--gold);}
+.dash-section-head .eyebrow{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:3px;}
+.dash-section-head h3{font-size:17px;color:var(--maroon);font-family:Georgia,serif;}
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media(max-width:900px){.chart-grid{grid-template-columns:1fr;}}
+.chart-card{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:20px 22px;}
+.chart-card h4{font-size:13px;color:var(--ink);text-transform:uppercase;letter-spacing:0.4px;margin-bottom:16px;font-weight:700;}
+.chart-legend-note{font-size:11px;color:var(--ink-soft);margin-top:10px;padding-top:10px;border-top:1px solid var(--line);}
+
+.quick-search-bar{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--maroon);border-radius:6px;padding:12px 16px;margin-bottom:16px;flex-wrap:wrap;}
+.quick-search-bar label{margin:0;white-space:nowrap;}
+.quick-search-bar input{flex:1;min-width:200px;}
+.quick-search-bar button{flex-shrink:0;}
+
+.master-filter-bar{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:16px;align-items:flex-end;}
+
+/* ===== ADMIN ===== */
+.view{display:none;}
+.view.active{display:block;}
+.admin-shell{display:flex;min-height:calc(100vh - 40px);}
+.admin-nav{width:220px;background:var(--maroon-dark);flex-shrink:0;padding:18px 0;}
+.admin-nav button{display:block;width:100%;text-align:left;background:transparent;color:#EDE3D3;padding:12px 22px;font-size:12.5px;font-weight:600;letter-spacing:0.3px;border-left:3px solid transparent;border-radius:0;}
+.admin-nav button:hover{background:rgba(255,255,255,0.06);}
+.admin-nav button.active{background:rgba(201,162,39,0.15);border-left-color:var(--gold);color:var(--gold-light);}
+.admin-main{flex:1;padding:26px 30px;overflow-x:auto;}
+.admin-main h2.page-title{font-size:21px;color:var(--maroon);margin-bottom:4px;}
+.admin-main .page-sub{font-size:12.5px;color:var(--ink-soft);margin-bottom:20px;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px;margin-bottom:16px;}
+.season-bar{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin-bottom:20px;flex-wrap:wrap;}
+.season-bar label{margin:0;}
+.season-bar select{width:auto;min-width:220px;}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:22px;}
+.stat-box{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:5px;padding:14px 16px;}
+.stat-box .num{font-size:24px;font-weight:700;color:var(--maroon);font-family:Georgia,serif;}
+.stat-box .lbl{font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:0.4px;margin-top:2px;}
+.ring-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-bottom:10px;}
+.ring-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:20px;text-align:center;position:relative;}
+.ring-card.flagged{border-color:var(--alert);}
+.ring-card .ring-title{font-size:12px;text-transform:uppercase;letter-spacing:0.6px;color:var(--ink-soft);font-weight:700;margin-bottom:14px;}
+.dial{width:140px;height:140px;border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;position:relative;}
+.dial::before{content:"";position:absolute;inset:10px;border-radius:50%;background:var(--surface);border:1px dashed var(--gold-light);}
+.dial-inner{position:relative;z-index:2;}
+.dial-inner .pct{font-size:24px;font-weight:700;color:var(--maroon);font-family:Georgia,serif;}
+.dial-inner .seats{font-size:10.5px;color:var(--ink-soft);margin-top:2px;}
+.flag-pill{position:absolute;top:12px;right:12px;background:var(--alert);color:#fff;font-size:9.5px;font-weight:700;padding:3px 8px;border-radius:10px;letter-spacing:0.4px;}
+.search-row{display:flex;gap:10px;margin-bottom:18px;}
+.search-row input{flex:1;}
+.search-row button{flex-shrink:0;}
+.result-card{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--maroon);border-radius:6px;padding:18px;margin-bottom:16px;}
+.result-card .r-name{font-family:Georgia,serif;font-size:17px;color:var(--maroon);margin-bottom:2px;}
+.result-card .r-meta{font-size:12px;color:var(--ink-soft);margin-bottom:10px;}
+.history-item{font-size:12px;padding:8px 0;border-bottom:1px solid var(--line);color:var(--ink-soft);}
+.history-item:last-child{border-bottom:none;}
+.history-item strong{color:var(--ink);}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,26,23,0.55);z-index:100;align-items:center;justify-content:center;}
+.modal-overlay.active{display:flex;}
+.modal-box{background:#fff;border-radius:8px;padding:26px;max-width:440px;width:92%;border-top:5px solid var(--gold);}
+.modal-box h3{color:var(--maroon);margin-bottom:12px;font-size:18px;}
+.upload-zone{border:2.5px dashed var(--gold);background:#FBF6E9;border-radius:6px;padding:26px;text-align:center;cursor:pointer;margin-bottom:10px;}
+.upload-zone.has-file{border-color:var(--success);background:var(--success-bg);}
+.upload-zone .icon{font-size:26px;margin-bottom:6px;}
+.upload-zone .lbl{font-weight:700;color:var(--maroon);font-size:13px;}
+.upload-zone.has-file .lbl{color:var(--success);}
+.upload-zone input{display:none;}
+table{width:100%;border-collapse:collapse;font-size:12.5px;}
+th{background:var(--maroon);color:#fff;text-align:left;padding:9px 10px;font-weight:700;letter-spacing:0.3px;}
+td{padding:8px 10px;border-bottom:1px solid var(--line);}
+tr:hover td{background:#FBF9F4;}
+.tag{display:inline-block;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;}
+.tag.success{background:var(--success);color:#fff;}
+.tag.alert{background:var(--alert);color:#fff;}
+.tag.warn{background:var(--gold);color:var(--maroon-dark);}
+.tag.info{background:var(--info);color:#fff;}
+.tag.neutral{background:#EFE9DC;color:var(--ink-soft);}
+.tab-pills{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
+.tab-pill{padding:9px 18px;background:var(--surface);border:1.5px solid var(--line);border-radius:20px;font-size:12px;font-weight:700;cursor:pointer;color:var(--ink-soft);}
+.tab-pill.active{background:var(--maroon);border-color:var(--maroon);color:#fff;}
+
+@media(max-width:900px){
+  .admin-shell{flex-direction:column;}
+  .admin-nav{width:100%;display:flex;overflow-x:auto;padding:8px;}
+  .admin-nav button{white-space:nowrap;border-left:none;border-bottom:3px solid transparent;padding:10px 16px;}
+  .admin-nav button.active{border-left:none;border-bottom-color:var(--gold);}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= STUDENT / PUBLIC VIEW ================= -->
+<div id="view-student" class="view active">
+
+  <div class="util-bar">
+    <div class="wrap"><a href="#" onclick="setMode('admin');return false;">Staff &amp; Admin Login</a></div>
+  </div>
+
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1>GRADUATION</h1>
+        <h2>Middlesex University Dubai</h2>
+        <h3>Class of 2026</h3>
+      </div>
+      <div class="mdx-logo-box">
+        <img src="https://api.mdx.ac.ae/uploads/logo_mdx_95d90243df.png" alt="Middlesex University Dubai logo">
+      </div>
+    </div>
+  </div>
+
+  <div class="info-strip">
+    <div class="wrap">
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="lbl">Date</div>
+          <div class="val">17 &amp; 18 October 2026</div>
+          <div class="sub">Saturday &amp; Sunday</div>
+        </div>
+        <div class="info-item">
+          <div class="lbl">Location</div>
+          <div class="val">Atlantis The Royal</div>
+          <div class="sub">Palm Jumeirah, Dubai</div>
+        </div>
+        <div class="info-item">
+          <div class="lbl">Schedule</div>
+          <div class="val">4 Ceremonies</div>
+          <div class="sub">Full timings listed below</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="feb-notice">
+      <strong>February 2027 Ceremony:</strong> Further information to be disclosed soon. Ticket sales are not yet live.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Ticket Sales</div>
+        <h2>Check Your Eligibility &amp; Purchase Tickets</h2>
+        <p class="desc">Every eligible graduate may initially purchase up to 2 guest tickets. Should further tickets be available, we shall let you know. Tickets are non-refundable once purchased.</p>
+      </div>
+
+      <div class="portal-shell">
+        <div class="window-banner">
+          Tickets are available from <strong>Wednesday 15 July 2026</strong>. The purchase deadline for the October ceremonies is <strong>Thursday 10 September 2026</strong>.
+        </div>
+
+        <div class="price-ref">
+          <div class="pr-item"><div class="pr-lbl">Graduate Only</div><div class="pr-val">325</div></div>
+          <div class="pr-item"><div class="pr-lbl">Guest Only</div><div class="pr-val">375</div></div>
+          <div class="pr-item"><div class="pr-lbl">Grad + 1 Guest</div><div class="pr-val">700</div></div>
+          <div class="pr-item"><div class="pr-lbl">Grad + 2 Guests</div><div class="pr-val">1075</div></div>
+        </div>
+
+        <div class="portal-card" id="ticket-flow"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Before You Attend</div>
+        <h2>Further Details</h2>
+      </div>
+
+      <div class="detail-stack">
+
+        <div class="detail-card">
+          <h3>Graduation Schedule</h3>
+          <table class="split-table">
+            <thead><tr><th>Ceremony</th><th>Date</th><th>Doors Open</th><th>Starts</th><th>Ends</th><th>Doors Close</th></tr></thead>
+            <tbody>
+              <tr><td>Ceremony 1</td><td>Sat 17 Oct</td><td>9:30 AM</td><td>11:00 AM</td><td>1:30 PM</td><td>2:30 PM</td></tr>
+              <tr><td>Ceremony 2</td><td>Sat 17 Oct</td><td>4:30 PM</td><td>6:00 PM</td><td>8:30 PM</td><td>9:30 PM</td></tr>
+              <tr><td>Ceremony 3</td><td>Sun 18 Oct</td><td>9:30 AM</td><td>11:00 AM</td><td>1:30 PM</td><td>2:30 PM</td></tr>
+              <tr><td>Ceremony 4</td><td>Sun 18 Oct</td><td>4:30 PM</td><td>6:00 PM</td><td>8:30 PM</td><td>9:30 PM</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="detail-card">
+          <h3>Which Programmes Graduate in Which Ceremony</h3>
+          <div class="ceremony-groups">
+            <div class="cgroup">
+              <div class="cg-title">Ceremony 1 — Saturday</div>
+              <ul>
+                <li>BA Business Management</li>
+                <li>BA Business Management (Finance)</li>
+                <li>BA Business Management (HRM)</li>
+                <li>BA Business Management (Innovation &amp; Entrepreneurship)</li>
+                <li>BA Business Management (Marketing)</li>
+                <li>BA Business Management (Project Management)</li>
+                <li>BA Business Management (Supply Chain &amp; Logistics)</li>
+              </ul>
+            </div>
+            <div class="cgroup">
+              <div class="cg-title">Ceremony 2 — Saturday</div>
+              <ul>
+                <li>BA Education Studies</li>
+                <li>BA International Business</li>
+                <li>BA Marketing</li>
+                <li>BSc International Tourism Management</li>
+                <li>BA Accounting and Finance</li>
+                <li>MBA / MBA (Finance) / MBA (Marketing)</li>
+                <li>MBA (Operations &amp; Supply Chain Management)</li>
+              </ul>
+            </div>
+            <div class="cgroup">
+              <div class="cg-title">Ceremony 3 — Sunday</div>
+              <ul>
+                <li>BA Advertising, PR and Branding</li>
+                <li>BA Creative Writing and Journalism</li>
+                <li>BA Digital Media and Communications</li>
+                <li>BA Fashion Design · BA Film · BA Graphic Design</li>
+                <li>BEng Computer Systems / Electronic Engineering</li>
+                <li>BSc Business Computing and Data Analytics</li>
+                <li>BSc Business Information Systems</li>
+                <li>BSc Cyber Security and Digital Forensics</li>
+                <li>BSc Information Technology</li>
+              </ul>
+            </div>
+            <div class="cgroup">
+              <div class="cg-title">Ceremony 4 — Sunday</div>
+              <ul>
+                <li>BA Law</li>
+                <li>BSc Psychology (Counselling / Criminology / Education / HRM / Marketing)</li>
+                <li>LLB Commercial Law</li>
+                <li>LLB Law</li>
+                <li>LLB Law with Criminology</li>
+                <li>LLB Law with International Relations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <h3>How to Purchase Your Tickets</h3>
+          <p>Tickets are non-refundable once purchased. You can pay using either method below.</p>
+          <h4>Finance Office, Dubai Knowledge Park</h4>
+          <p>Pay in cash via the cash deposit machine (CDM) or by card over the counter at the Finance Office, Block 16. Please deposit the exact amount — the CDM will not process a balance amount. Have the graduate's full name, MISIS number and email ready.</p>
+          <h4>MDX Online Payment Portal</h4>
+          <p>Pay online and reference the graduate's full name, MISIS number and email. Select "Graduation" under 'Are you', then choose your ticket option. Online payments take 48 hours (2 working days) to reflect on our records before tickets can be issued.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>How to Collect Your Tickets</h3>
+          <p>Collect your tickets and graduation package outside the Marketing Office, 3rd Floor, Block 16, Dubai Knowledge Park.</p>
+          <p><strong>Monday – Thursday:</strong> 9:00 AM – 6:30 PM &nbsp;·&nbsp; <strong>Friday:</strong> 9:00 AM – 5:00 PM</p>
+          <p>Your package includes: graduate and guest tickets purchased, cap/gown/scarf for your ceremony, and a laminated name card (bring this with you on the day). International graduates travelling for the event may collect their package on arrival, a few days before the ceremony.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>Venue &amp; Parking</h3>
+          <p>Traffic on the Palm is busy at weekends — please allow plenty of time, as latecomers cannot be admitted once doors close. Arriving by public transport is encouraged.</p>
+          <p>Free valet parking is available on a first-come, first-served basis at Atlantis The Royal for the duration of your ceremony — go to the Conference Centre entrance to request it.</p>
+        </div>
+
+        <div class="detail-card">
+          <h3>Things to Keep in Mind</h3>
+          <ul class="mind-list">
+            <li>Guest tickets can only be purchased after the graduate ticket has been bought.</li>
+            <li>Maximum 1 graduate ticket and 2 guest tickets per student, at this stage.</li>
+            <li>Do not attempt to purchase more than 2 guest tickets — any surplus balance will be refunded and no extra ticket issued.</li>
+            <li>Children under 4 may attend free of charge but will not be allocated a seat, and must sit with a parent or guardian.</li>
+            <li>Students on financial hold cannot purchase tickets until their balance is cleared, unless approved by Finance or Marketing.</li>
+            <li>For eligibility queries, contact Campus Central via AskMDX. For graduation logistics, contact graduation@mdx.ac.ae.</li>
+          </ul>
+        </div>
+
+        <div class="notice-box">
+          <strong>Important to note:</strong> Communications about Graduation Class of 2026 are for planning purposes only and are not formal confirmation of award. Only students formally awarded their qualification, having met all academic and regulatory requirements, may attend. Formal confirmation of award is issued separately via MyMDX — attending a ceremony, appearing in ceremony materials, purchasing gowns, or event photography does not constitute evidence of graduation.
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Middlesex University Dubai · Dubai Knowledge Park, Blocks 15, 16, 17 &amp; 19 · Graduation Office · Class of 2026
+  </div>
+</div>
+
+<!-- ================= ADMIN VIEW ================= -->
+<div id="view-admin" class="view">
+  <div class="util-bar">
+    <div class="wrap"><a href="#" onclick="setMode('student');return false;">← Back to Public Site</a></div>
+  </div>
+  <div class="admin-shell">
+    <div class="admin-nav">
+      <button class="nav-btn active" data-page="dashboard" onclick="setAdminPage('dashboard')">Dashboard</button>
+      <button class="nav-btn" data-page="allocation" onclick="setAdminPage('allocation')">Ceremony Allocation</button>
+      <button class="nav-btn" data-page="finance" onclick="setAdminPage('finance')">Finance Entry</button>
+      <button class="nav-btn" data-page="hold" onclick="setAdminPage('hold')">Financial Hold</button>
+      <button class="nav-btn" data-page="collection" onclick="setAdminPage('collection')">Ticket Collection</button>
+      <button class="nav-btn" data-page="waitlist" onclick="setAdminPage('waitlist')">Extra Tickets (Waiting List)</button>
+      <button class="nav-btn" data-page="upload" onclick="setAdminPage('upload')">Data Upload</button>
+      <button class="nav-btn" data-page="master" onclick="setAdminPage('master')">Master List</button>
+      <button class="nav-btn" data-page="reconciliation" onclick="setAdminPage('reconciliation')">Reconciliation</button>
+      <button class="nav-btn" data-page="audit" onclick="setAdminPage('audit')">Audit Log</button>
+    </div>
+    <div class="admin-main" id="admin-main"></div>
+  </div>
+</div>
+
+<!-- Modal for financial hold override -->
+<div class="modal-overlay" id="override-modal">
+  <div class="modal-box">
+    <h3>Allow Purchase — Financial Hold Override</h3>
+    <p style="font-size:12.5px;color:var(--ink-soft);margin-bottom:14px;">This student is currently on financial hold. Allocating a ticket bypasses the hold for this transaction only. Please state the reason for approval.</p>
+    <div class="field">
+      <label>Student</label>
+      <input type="text" id="override-student-name" disabled style="background:#F5F2EA;">
+    </div>
+    <div class="field">
+      <label>Tickets Being Allocated</label>
+      <select id="override-ticket-select">
+        <option value="grad">Graduate Ticket (325 AED)</option>
+        <option value="grad1guest">Graduate + 1 Guest (700 AED)</option>
+        <option value="grad2guest">Graduate + 2 Guests (1075 AED)</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Reason / Approval Comment (required)</label>
+      <textarea id="override-reason" rows="3" placeholder="e.g. Approved by Marketing Lead — student clearing balance next week, family travelling from abroad for ceremony"></textarea>
+    </div>
+    <div class="btn-row">
+      <button class="btn-success" style="flex:1;" onclick="confirmOverride()">Confirm Allocation</button>
+      <button class="btn-outline" style="flex:1;" onclick="closeOverrideModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for ambiguous finance amount -->
+<div class="modal-overlay" id="ambiguous-modal">
+  <div class="modal-box">
+    <h3>Amount Doesn't Match a Standard Package</h3>
+    <p style="font-size:12.5px;color:var(--ink-soft);margin-bottom:14px;" id="ambiguous-msg"></p>
+    <div class="field">
+      <label>Manually Allocate</label>
+      <select id="manual-alloc-select">
+        <option value="">Select what was actually purchased</option>
+        <option value="325">Graduate only — 325 AED</option>
+        <option value="700">Graduate + 1 Guest — 700 AED</option>
+        <option value="1075">Graduate + 2 Guests — 1075 AED</option>
+        <option value="375">1 Guest only — 375 AED</option>
+        <option value="750">2 Guests only — 750 AED</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Note (optional)</label>
+      <textarea id="manual-alloc-note" rows="2" placeholder="e.g. Student had 300 AED excess credit on account"></textarea>
+    </div>
+    <div class="btn-row">
+      <button class="btn-success" style="flex:1;" onclick="confirmManualAllocation()">Save Allocation</button>
+      <button class="btn-outline" style="flex:1;" onclick="closeAmbiguousModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   SHARED MOCK DATABASE
+   ============================================================ */
+let db = {
+  season: "Oct 2026",
+  students: {
+    'M00123456': { name:'Sarah Ahmed', email:'sarah.ahmed@live.mdx.ac.ae', course:'BSc Engineering', ceremony:'C1', graduate:1, guests:1, hold:false, standing:'Confirmed Graduate', collected:false, invoiced:true, lastUpdate:'2026-08-10' },
+    'M00123457': { name:'Ali Hassan', email:'ali.hassan@live.mdx.ac.ae', course:'BA Business', ceremony:'C2', graduate:0, guests:0, hold:false, standing:'Confirmed Graduate', collected:false, invoiced:false, lastUpdate:'' },
+    'M00123458': { name:'Fatima Khan', email:'fatima.khan@live.mdx.ac.ae', course:'BSc Psychology', ceremony:'C3', graduate:1, guests:2, hold:false, standing:'Confirmed Graduate', collected:false, invoiced:false, lastUpdate:'2026-08-05' },
+    'M00123459': { name:'Layla Khan', email:'layla.khan@live.mdx.ac.ae', course:'BA Law', ceremony:'', graduate:0, guests:0, hold:true, holdType:'Confirmed Graduate', standing:'Confirmed Graduate', balance:1450, collected:false, invoiced:false, lastUpdate:'' },
+    'M00123460': { name:'Omar Ibrahim', email:'omar.ibrahim@live.mdx.ac.ae', course:'BSc IT', ceremony:'', graduate:0, guests:0, hold:true, holdType:'Potential Graduate', standing:'Potential Graduate', balance:-40, collected:false, invoiced:false, lastUpdate:'' },
+    'M00123461': { name:'Noor Khalid', email:'noor.khalid@live.mdx.ac.ae', course:'BA Design', ceremony:'', graduate:0, guests:0, hold:false, finalist:true, standing:'Finalist', collected:false, invoiced:false, lastUpdate:'' },
+    'M00123462': { name:'Mariam Ahmed', email:'mariam.ahmed@live.mdx.ac.ae', course:'BSc Nursing', ceremony:'C1', graduate:1, guests:0, hold:false, standing:'Confirmed Graduate', collected:true, invoiced:true, lastUpdate:'2026-07-28' },
+    'M00987001': { name:'Zayd Noor', email:'zayd.noor@live.mdx.ac.ae', course:'BA Law', ceremony:'C4', graduate:0, guests:0, hold:false, standing:'Confirmed Graduate', collected:false, invoiced:false, lastUpdate:'' },
+    'M00987002': { name:'Hana Youssef', email:'hana.youssef@live.mdx.ac.ae', course:'BSc IT', ceremony:'C2', graduate:1, guests:0, hold:false, standing:'Confirmed Graduate', collected:false, invoiced:false, lastUpdate:'' },
+    'M00987003': { name:'Karim Saleh', email:'karim.saleh@live.mdx.ac.ae', course:'BA Business', ceremony:'C1', graduate:0, guests:0, hold:false, standing:'Confirmed Graduate', collected:false, invoiced:false, lastUpdate:'' },
+    'M00987004': { name:'Yara Fathi', email:'yara.fathi@live.mdx.ac.ae', course:'BSc Psychology', ceremony:'C3', graduate:0, guests:0, hold:false, standing:'Re-assessment', collected:false, invoiced:false, lastUpdate:'' }
+  },
+  ceremonyCapacity: { C1:1000, C2:1000, C3:1000, C4:1000 },
+  ceremonyOccupied: { C1:812, C2:640, C3:915, C4:410 },
+  programmeMap: {
+    'BSc Engineering':'C1','BA Law':'C4','BA Business':'C1','BSc IT':'C2',
+    'BSc Psychology':'C4','BA Design':'C3','BSc Nursing':'C4'
+  },
+  allocationHistory: {
+    'M00123458': [
+      {from:'—', to:'C2', date:'2026-06-02', by:'Academic Team'},
+      {from:'C2', to:'C3', date:'2026-07-14', by:'Academic Team'}
+    ]
+  },
+  auditLog: [
+    {user:'R. Nair — Finance', email:'r.nair@mdx.ac.ae', dept:'Finance', action:'Allocated 1 Graduate + 1 Guest to M00123456', reason:'Standard online payment, 700 AED', time:'2026-08-10 09:14'},
+    {user:'A. Sayed — Marketing', email:'a.sayed@mdx.ac.ae', dept:'Marketing', action:'Marked M00123462 as Collected', reason:'—', time:'2026-07-28 14:02'},
+    {user:'F. Osman — DAR & Campus Central', email:'f.osman@mdx.ac.ae', dept:'DAR & Campus Central', action:'Reallocated M00123458 from Ceremony 2 to Ceremony 3', reason:'Balancing ceremony capacity', time:'2026-07-14 11:30'}
+  ],
+  ccavenueReport: [
+    {misis:'M00987001', name:'Zayd Noor', amount:1075, status:'pending'},
+    {misis:'M00987002', name:'Hana Youssef', amount:375, status:'pending'},
+    {misis:'M00987003', name:'Karim Saleh', amount:700, status:'pending'},
+    {misis:'M00987004', name:'Yara Fathi', amount:325, status:'pending'},
+    {misis:'M00123457', name:'Ali Hassan', amount:500, status:'pending'}
+  ],
+  ticketRequests: [
+    {misis:'M00123458', name:'Fatima Khan', extra:2, date:'2026-08-12', status:'Pending'},
+    {misis:'M00987002', name:'Hana Youssef', extra:1, date:'2026-08-14', status:'Pending'}
+  ]
+};
+let pendingOverrideMisis = null;
+let pendingAmbiguous = null;
+let financeTab = 'counter';
+let adminRole = 'finance';
+
+function normalizeMisis(input){
+  const digits = (input||'').replace(/\D/g,'');
+  if(!digits) return (input||'').trim().toUpperCase();
+  return 'M'+digits.padStart(8,'0');
+}
+function ceremonyLabel(code){
+  if(!code) return 'Not Allocated';
+  return 'Ceremony '+code.replace('C','');
+}
+function ticketSummaryLabel(g,gu){
+  if(g===0 && gu===0) return 'No tickets purchased yet';
+  let parts=[];
+  if(g>0) parts.push(g+' Graduate');
+  if(gu>0) parts.push(gu+' Guest'+(gu>1?'s':''));
+  return parts.join(' + ');
+}
+
+/* ============================================================
+   TOP-LEVEL MODE SWITCH
+   ============================================================ */
+function setMode(mode){
+  document.getElementById('view-student').classList.toggle('active', mode==='student');
+  document.getElementById('view-admin').classList.toggle('active', mode==='admin');
+  if(mode==='admin'){ renderAdmin(); }
+  window.scrollTo(0,0);
+}
+
+/* ============================================================
+   STUDENT / PUBLIC TICKET FLOW
+   ============================================================ */
+const studentApp = document.getElementById('ticket-flow');
+let sState='entry';
+let sNextState=null;
+let generatedOtp='';
+let sData={misis:'',name:'',course:'',ceremony:'',graduate:0,guests:0,hold:false,finalist:false};
+let sSelected={graduate:false,guests:0};
+
+function renderStudent(){
+  studentApp.innerHTML='';
+  const map={entry:rsEntry,checking:rsChecking,otp:rsOtp,eligible:rsEligible,financial:rsFinancial,
+    finalist:rsFinalist,select:rsSelect,ccavenue:rsCCAvenue,confirm:rsConfirm,maxed:rsMaxed,request:rsRequest};
+  map[sState]();
+}
+function rsEntry(){
+  studentApp.innerHTML=`
+    <div class="portal-header">
+      <div class="seal">C</div>
+      <h1>Graduation Tickets</h1>
+      <p>Enter your Student ID to check eligibility</p>
+    </div>
+    <div class="field">
+      <label for="s-misis">Student ID (MISIS)</label>
+      <input type="text" id="s-misis" placeholder="e.g. M00123456 or just 123456">
+    </div>
+    <button class="btn-primary btn-block" onclick="checkS()">Check Eligibility</button>
+    <div class="demo-note">
+      <strong>Demo IDs</strong>
+      <p>M00123456 — eligible, 1 Graduate + 1 of 2 Guests purchased</p>
+      <p>M00123457 — eligible, nothing purchased yet</p>
+      <p>M00123458 — maxed out (1 Graduate + 2 Guests)</p>
+      <p>M00123459 — financial hold, balance outstanding</p>
+      <p>M00123460 — financial hold, balance cleared</p>
+      <p>M00123461 — finalist, not yet eligible</p>
+      <p>M00123462 — eligible, 1 Graduate purchased and collected</p>
+      <p>M00987001 — eligible, nothing purchased yet</p>
+    </div>`;
+  document.getElementById('s-misis').focus();
+}
+function rsChecking(){
+  studentApp.innerHTML=`<div class="portal-header"><h1>Checking…</h1><p>Looking up your record</p></div>`;
+  setTimeout(()=>{
+    const id=sData.misis.toUpperCase();
+    const rec=db.students[id];
+    if(rec){
+      sData={...sData,...rec,misis:id};
+      if(rec.hold) sNextState='financial';
+      else if(rec.finalist || !rec.ceremony) sNextState='finalist';
+      else sNextState='eligible';
+      generatedOtp=String(Math.floor(100000+Math.random()*900000));
+      sState='otp';
+    } else {
+      sState='finalist';
+      sNextState=null;
+    }
+    renderStudent();
+  },900);
+}
+function maskEmail(email){
+  if(!email) return 'your MDX email';
+  const [user,domain]=email.split('@');
+  if(!domain) return email;
+  const visible=user.slice(0,2);
+  return visible+'*'.repeat(Math.max(user.length-2,3))+'@'+domain;
+}
+function rsOtp(){
+  studentApp.innerHTML=`
+    <div class="portal-header">
+      <h1>Verify Your Identity</h1>
+      <p>For your privacy, we confirm it's really you before showing any ticket or eligibility details</p>
+    </div>
+    <div class="banner info">A 6-digit verification code has been sent to <strong>${maskEmail(sData.email)}</strong>, your registered MDX email. Enter it below to continue.</div>
+    <div class="field">
+      <label for="otp-input">6-Digit Verification Code</label>
+      <input type="text" id="otp-input" maxlength="6" inputmode="numeric" placeholder="000000" style="letter-spacing:6px;font-size:18px;text-align:center;">
+    </div>
+    <button class="btn-primary btn-block" onclick="verifyOtp()">Verify &amp; Continue</button>
+    <button class="btn-outline btn-block" style="margin-top:8px;" onclick="resendOtp()">Resend Code</button>
+    <div class="demo-note">
+      <strong>Demo only</strong>
+      <p>In production this code is emailed and never shown on screen. For this prototype, the code is: <strong>${generatedOtp}</strong></p>
+    </div>
+    <button class="btn-outline btn-block" style="margin-top:8px;" onclick="resetS()">Cancel</button>`;
+  document.getElementById('otp-input').focus();
+}
+function verifyOtp(){
+  const val=document.getElementById('otp-input').value.trim();
+  if(val!==generatedOtp){ alert('Incorrect code. Please check your email and try again.'); return; }
+  sState=sNextState;
+  renderStudent();
+}
+function resendOtp(){
+  generatedOtp=String(Math.floor(100000+Math.random()*900000));
+  alert('A new code has been sent to '+maskEmail(sData.email));
+  rsOtp();
+}
+function rsEligible(){
+  if(sData.graduate===1 && sData.guests===2){ sState='maxed'; renderStudent(); return; }
+
+  const gradOwned = sData.graduate===1;
+  const remainingGuests = 2 - sData.guests;
+  const canBuyGuest = gradOwned || sSelected.graduate;
+
+  let gradBlock = !gradOwned ? `
+    <div class="ticket-row" onclick="document.getElementById('grad-cb').click()">
+      <div><div class="t-name">Graduate Ticket</div><div class="t-price">AED 325.00</div></div>
+      <input type="checkbox" id="grad-cb" ${sSelected.graduate?'checked':''} onchange="sSelected.graduate=this.checked; if(!this.checked){sSelected.guests=0;} rsEligible();">
+    </div>` : `<div class="banner success" style="margin-bottom:10px;">✓ Graduate ticket already purchased</div>`;
+
+  let guestBlock='';
+  if(remainingGuests<=0){
+    guestBlock = `<div class="banner success">✓ Maximum guest tickets already purchased</div>`;
+  } else if(!canBuyGuest){
+    guestBlock = `
+      <div class="ticket-row locked">
+        <div><div class="t-name">Guest Tickets</div><div class="t-price">Locked — AED 375.00 each</div></div>
+      </div>
+      <small class="hint">Guest tickets unlock once your Graduate ticket is purchased. Select the Graduate ticket above to add guests in the same order.</small>`;
+  } else {
+    let options='<option value="0">0 guests</option>';
+    for(let n=1;n<=remainingGuests;n++){
+      options+=`<option value="${n}" ${sSelected.guests===n?'selected':''}>${n} guest${n>1?'s':''}</option>`;
+    }
+    guestBlock = `
+      <div class="field">
+        <label for="guest-sel">Guest Tickets — AED 375 each</label>
+        <select id="guest-sel" onchange="sSelected.guests=parseInt(this.value)">${options}</select>
+        <small class="hint">You have ${remainingGuests} guest ticket(s) remaining out of the 2 allowed.</small>
+      </div>`;
+  }
+
+  studentApp.innerHTML=`
+    <div class="portal-header">
+      <h1>${sData.name}</h1>
+      <p>You are eligible to graduate</p>
+    </div>
+    <div class="banner success">Confirmed — assigned to <span class="ceremony-chip">${ceremonyLabel(sData.ceremony)}</span></div>
+    <div class="kv-grid" style="margin-bottom:14px;">
+      <div class="k">Programme</div><div class="v">${sData.course}</div>
+      <div class="k">Purchased</div><div class="v">${ticketSummaryLabel(sData.graduate,sData.guests)}</div>
+    </div>
+    <div class="divider"></div>
+    ${gradBlock}
+    ${guestBlock}
+    <div class="btn-row" style="margin-top:16px;">
+      <button class="btn-primary btn-block" onclick="proceedS()">Proceed to Payment</button>
+    </div>
+    <button class="btn-outline btn-block" style="margin-top:8px;" onclick="resetS()">Back</button>`;
+}
+function rsFinancial(){
+  studentApp.innerHTML=`
+    <div class="portal-header"><h1>Outstanding Balance</h1></div>
+    <div class="banner alert">You are currently under financial hold due to an outstanding balance on your account. Once the outstanding balance is cleared, you will be eligible to attend the graduation ceremony. For further details regarding your outstanding balance, please contact the Finance Team by raising a ticket through <a href="#">AskMDX (askmdx.mdx.ac.ae)</a>. For any graduation-related queries, please contact the Graduation Team at <a href="#">graduation@mdx.ac.ae</a>.</div>
+    <button class="btn-outline btn-block" onclick="resetS()">Back</button>`;
+}
+function rsFinalist(){
+  studentApp.innerHTML=`
+    <div class="portal-header"><h1>Not Yet Eligible</h1></div>
+    <div class="banner warn">Please be informed that you are currently a finalist student. You will be eligible to purchase graduation tickets once your results are confirmed and you are allocated to a graduation ceremony. For any further queries regarding your graduation eligibility, kindly contact Campus Central by raising a ticket through AskMDX under the relevant category.</div>
+    <button class="btn-outline btn-block" onclick="resetS()">Back</button>`;
+}
+function rsSelect(){
+  let items=[], total=0;
+  if(sSelected.graduate){items.push(['Graduate Ticket',325]); total+=325;}
+  if(sSelected.guests>0){items.push([sSelected.guests+' Guest Ticket(s)',375*sSelected.guests]); total+=375*sSelected.guests;}
+  studentApp.innerHTML=`
+    <div class="portal-header"><h1>Review Order</h1></div>
+    <div class="card" style="border-color:var(--gold);">
+      ${items.map(i=>`<div style="display:flex;justify-content:space-between;padding:4px 0;font-size:13.5px;"><span>${i[0]}</span><span>AED ${i[1].toFixed(2)}</span></div>`).join('')}
+      <div class="order-total"><span>Total</span><span>AED ${total.toFixed(2)}</span></div>
+    </div>
+    <div class="banner info">You'll be redirected to CCAvenue to complete payment securely.</div>
+    <button class="btn-success btn-block" onclick="sState='ccavenue';renderStudent();">Proceed to CCAvenue</button>
+    <button class="btn-outline btn-block" style="margin-top:8px;" onclick="resetS()">Cancel</button>`;
+}
+function rsCCAvenue(){
+  let total=sSelected.graduate*325+sSelected.guests*375;
+  studentApp.innerHTML=`
+    <div class="portal-header"><h1>Payment Gateway</h1></div>
+    <div class="banner warn">Redirecting to CCAvenue — do not refresh this page.</div>
+    <div class="kv-grid">
+      <div class="k">Order ID</div><div class="v">GRD-${Date.now().toString().slice(-8)}</div>
+      <div class="k">Amount</div><div class="v">AED ${total.toFixed(2)}</div>
+    </div>
+    <button class="btn-success btn-block" style="margin-top:14px;" onclick="sState='confirm';renderStudent();">Open CCAvenue (Demo)</button>
+    <small class="hint" style="text-align:center;">Production redirect target: https://payment.ccavenue.com/merchant_api/</small>
+    <button class="btn-outline btn-block" style="margin-top:10px;" onclick="resetS()">Cancel</button>`;
+}
+function rsConfirm(){
+  let total=sSelected.graduate*325+sSelected.guests*375;
+  let items=[];
+  if(sSelected.graduate) items.push('1 Graduate Ticket');
+  if(sSelected.guests>0) items.push(sSelected.guests+' Guest Ticket(s)');
+  studentApp.innerHTML=`
+    <div class="portal-header"><h1>Payment Received</h1></div>
+    <div class="banner success"><strong>Success.</strong> Your payment has been received. Online payments take up to 48 hours to reflect before tickets are issued.</div>
+    <div class="kv-grid">
+      <div class="k">Reference</div><div class="v">GRD-${Date.now().toString().slice(-8)}</div>
+      <div class="k">Paid</div><div class="v">AED ${total.toFixed(2)}</div>
+      <div class="k">Tickets</div><div class="v">${items.join(', ')}</div>
+    </div>
+    <p style="font-size:12px;color:var(--ink-soft);margin-top:10px;">A confirmation email is on its way. Collect your tickets from the Marketing Office once processed.</p>
+    <button class="btn-outline btn-block" style="margin-top:14px;" onclick="resetS()">Done</button>`;
+}
+function rsMaxed(){
+  studentApp.innerHTML=`
+    <div class="portal-header"><h1>Maximum Reached</h1></div>
+    <div class="banner alert">You've already purchased the maximum tickets (1 Graduate + 2 Guests). No further purchases are possible right now.</div>
+    <p style="font-size:12.5px;color:var(--ink-soft);margin:14px 0;">Need more? Submit a request — our marketing team will review it as additional tickets are released.</p>
+    <button class="btn-gold btn-block" onclick="sState='request';renderStudent();">Request Additional Tickets</button>
+    <button class="btn-outline btn-block" style="margin-top:8px;" onclick="resetS()">Back</button>`;
+}
+function rsRequest(){
+  studentApp.innerHTML=`
+    <div class="portal-header"><h1>Request More Tickets</h1></div>
+    <div class="banner info">Marketing will review your request and contact you by email as additional tickets are released, on a first-come, first-served basis.</div>
+    <div class="field"><label>Email</label><input type="email" id="req-email" placeholder="you@mdx.ac.ae"></div>
+    <div class="field"><label>Additional Tickets Needed</label><input type="number" id="req-qty" min="1" value="1"></div>
+    <div class="field"><label>Reason (optional)</label><textarea id="req-reason" rows="2"></textarea></div>
+    <button class="btn-success btn-block" onclick="submitReq()">Submit Request</button>
+    <button class="btn-outline btn-block" style="margin-top:8px;" onclick="resetS()">Cancel</button>`;
+}
+function checkS(){
+  const v=document.getElementById('s-misis').value.trim();
+  if(!v){alert('Enter your Student ID');return;}
+  sData.misis=normalizeMisis(v); sState='checking'; renderStudent();
+}
+function proceedS(){
+  if(!sSelected.graduate && sSelected.guests===0){alert('Select at least one ticket');return;}
+  if(sSelected.guests>0 && !(sSelected.graduate || sData.graduate===1)){alert('Guest tickets require a Graduate ticket first');return;}
+  sState='select'; renderStudent();
+}
+function submitReq(){
+  const email=document.getElementById('req-email').value.trim();
+  const qty=parseInt(document.getElementById('req-qty').value)||1;
+  if(!email){alert('Enter your email');return;}
+  db.ticketRequests.push({misis:sData.misis, name:sData.name, extra:qty, date:new Date().toISOString().slice(0,10), status:'Pending', email:email});
+  alert('Request submitted. Marketing will contact you at '+email+'.');
+  resetS();
+}
+function resetS(){
+  sState='entry'; sData={misis:'',name:'',course:'',ceremony:'',graduate:0,guests:0,hold:false,finalist:false};
+  sSelected={graduate:false,guests:0}; renderStudent();
+}
+
+/* ============================================================
+   ADMIN PANEL
+   ============================================================ */
+let adminPage='dashboard';
+const staffList = [
+  {name:'R. Nair', email:'r.nair@mdx.ac.ae', dept:'Finance'},
+  {name:'A. Sayed', email:'a.sayed@mdx.ac.ae', dept:'Marketing'},
+  {name:'F. Osman', email:'f.osman@mdx.ac.ae', dept:'DAR & Campus Central'},
+  {name:'S. Qureshi', email:'s.qureshi@mdx.ac.ae', dept:'Finance'},
+  {name:'M. Haidari', email:'m.haidari@mdx.ac.ae', dept:'Marketing'}
+];
+let currentStaff = staffList[0];
+
+function setAdminPage(p){
+  adminPage=p;
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active', b.dataset.page===p));
+  renderAdmin();
+}
+function renderAdmin(){
+  const main=document.getElementById('admin-main');
+  const pages={dashboard:adminDashboard,allocation:adminAllocation,finance:adminFinance,
+    hold:adminHold,collection:adminCollection,waitlist:adminWaitlist,upload:adminUpload,audit:adminAudit,master:adminMaster,reconciliation:adminReconciliation};
+  main.innerHTML = identityBar() + seasonBar() + quickSearchBar() + pages[adminPage]();
+  if(adminPage==='master') renderMasterTable();
+}
+function quickSearchBar(){
+  return `
+  <div class="quick-search-bar">
+    <label>Quick Student Search</label>
+    <input type="text" id="quick-search-input" placeholder="Enter MISIS — e.g. M00123457 or just 123457" onkeydown="if(event.key==='Enter')quickSearchStudent();">
+    <button class="btn-primary btn-sm" onclick="quickSearchStudent()">Search</button>
+  </div>
+  <div id="quick-search-result"></div>`;
+}
+function quickSearchStudent(){
+  const input=document.getElementById('quick-search-input').value;
+  const id=normalizeMisis(input);
+  const rec=db.students[id];
+  const box=document.getElementById('quick-search-result');
+  if(!rec){ box.innerHTML=`<div class="banner alert" style="margin-top:-6px;margin-bottom:16px;">No student found with ID ${id}.</div>`; return; }
+  box.innerHTML=`
+    <div class="result-card" style="margin-top:-6px;">
+      <div class="r-name">${rec.name}</div>
+      <div class="r-meta">${rec.course} · ${id}</div>
+      <div class="kv-grid">
+        <div class="k">Academic Standing</div><div class="v">${rec.standing||'—'}</div>
+        <div class="k">Financial Hold</div><div class="v">${rec.hold?'<span class="tag alert">Yes</span>':'<span class="tag success">No</span>'}</div>
+        <div class="k">Ceremony</div><div class="v">${ceremonyLabel(rec.ceremony)}</div>
+        <div class="k">Tickets Purchased</div><div class="v">${ticketSummaryLabel(rec.graduate,rec.guests)}</div>
+        <div class="k">Collected</div><div class="v">${(rec.graduate||rec.guests)?(rec.collected?'<span class="tag success">Yes</span>':'<span class="tag warn">No</span>'):'—'}</div>
+      </div>
+      <div class="btn-row" style="margin-top:12px;">
+        <button class="btn-sm btn-outline" onclick="jumpToAllocation('${id}')">Ceremony Allocation</button>
+        <button class="btn-sm btn-outline" onclick="jumpToFinance('${id}')">Finance Entry</button>
+        <button class="btn-sm btn-outline" onclick="jumpToCollection()">Ticket Collection</button>
+        ${rec.hold? `<button class="btn-sm btn-outline" onclick="jumpToHold()">Financial Hold</button>`:''}
+      </div>
+    </div>`;
+}
+function jumpToAllocation(id){
+  adminPage='allocation';
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active', b.dataset.page==='allocation'));
+  renderAdmin();
+  const el=document.getElementById('alloc-search');
+  if(el){ el.value=id; doAllocSearch(); }
+}
+function jumpToFinance(id){
+  adminPage='finance';
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active', b.dataset.page==='finance'));
+  financeTab='counter';
+  renderAdmin();
+  const el=document.getElementById('fin-misis');
+  if(el) el.value=id;
+}
+function jumpToCollection(){ setAdminPage('collection'); }
+function jumpToHold(){ setAdminPage('hold'); }
+function identityBar(){
+  return `
+  <div class="identity-bar">
+    <label style="margin:0;">Logged in as</label>
+    <select onchange="setCurrentStaff(this.value)">
+      ${staffList.map((s,i)=>`<option value="${i}" ${s===currentStaff?'selected':''}>${s.name} — ${s.dept} (${s.email})</option>`).join('')}
+    </select>
+    <span class="id-note">All staff share the same access. Every change is attributed to this identity in the Audit Log.</span>
+  </div>`;
+}
+function setCurrentStaff(i){
+  currentStaff = staffList[parseInt(i)];
+  renderAdmin();
+}
+function logAction(action, reason){
+  db.auditLog.unshift({
+    user: currentStaff.name+' — '+currentStaff.dept,
+    email: currentStaff.email,
+    dept: currentStaff.dept,
+    action: action,
+    reason: reason||'—',
+    time: new Date().toISOString().slice(0,16).replace('T',' ')
+  });
+}
+function seasonBar(){
+  return `
+  <div class="season-bar">
+    <label style="margin:0;">Academic Year / Season</label>
+    <select onchange="db.season=this.value; renderAdmin();">
+      <option ${db.season==='Oct 2026'?'selected':''}>Oct 2026</option>
+      <option ${db.season==='Mar 2026'?'selected':''}>Mar 2026</option>
+      <option ${db.season==='Oct 2025'?'selected':''}>Oct 2025 (archived)</option>
+      <option ${db.season==='Mar 2025'?'selected':''}>Mar 2025 (archived)</option>
+    </select>
+    <span style="font-size:11.5px;color:var(--ink-soft);">Viewing data for the selected graduation season. Each season keeps its own C1–C4 lists.</span>
+  </div>`;
+}
+
+function hbar(label, value, max, color){
+  const pct = max>0 ? Math.round(value/max*100) : 0;
+  return `<div style="margin-bottom:13px;">
+    <div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px;"><span>${label}</span><span style="font-weight:700;color:var(--maroon);">${value}</span></div>
+    <div style="background:#EFE7D6;border-radius:4px;height:15px;overflow:hidden;">
+      <div style="width:${pct}%;background:${color||'var(--gold)'};height:100%;"></div>
+    </div>
+  </div>`;
+}
+function adminDashboard(){
+  const cer=db.ceremonyOccupied, cap=db.ceremonyCapacity;
+  const totalOcc = Object.values(cer).reduce((a,b)=>a+b,0);
+  const totalCap = Object.values(cap).reduce((a,b)=>a+b,0);
+  const totalPct = Math.round(totalOcc/totalCap*100);
+  const paid = Object.values(db.students).filter(s=>s.graduate||s.guests).length;
+  const holdCount = Object.values(db.students).filter(s=>s.hold).length;
+  const pendingCollect = Object.values(db.students).filter(s=>(s.graduate||s.guests)&&!s.collected).length;
+
+  let ringsHTML='';
+  ['C1','C2','C3','C4'].forEach(c=>{
+    const pct=Math.round(cer[c]/cap[c]*100);
+    const flagged=pct>=80;
+    ringsHTML+=`
+      <div class="ring-card ${flagged?'flagged':''}">
+        ${flagged?'<div class="flag-pill">80%+ FULL</div>':''}
+        <div class="ring-title">${ceremonyLabel(c)}</div>
+        ${dial(pct)}
+        <div style="font-size:11.5px;color:var(--ink-soft);">${cer[c]} / ${cap[c]} seats</div>
+      </div>`;
+  });
+
+  /* Ticket sales breakdown */
+  const breakdown={gradOnly:0,gradPlus1:0,gradPlus2:0};
+  Object.values(db.students).forEach(s=>{
+    if(s.graduate===1 && s.guests===0) breakdown.gradOnly++;
+    else if(s.graduate===1 && s.guests===1) breakdown.gradPlus1++;
+    else if(s.graduate===1 && s.guests===2) breakdown.gradPlus2++;
+  });
+  const excessCount = db.ticketRequests.length;
+  const bMax = Math.max(breakdown.gradOnly,breakdown.gradPlus1,breakdown.gradPlus2,excessCount,1);
+
+  /* Programme-wise breakdown */
+  const progMap={};
+  Object.values(db.students).forEach(s=>{
+    const total=s.graduate+s.guests;
+    if(total===0) return;
+    progMap[s.course]=(progMap[s.course]||0)+total;
+  });
+  const progEntries=Object.entries(progMap).sort((a,b)=>b[1]-a[1]);
+  const pMax = progEntries.length ? progEntries[0][1] : 1;
+
+  /* Revenue summary */
+  const revenue = computeRevenueSummary();
+
+  return `
+    <h2 class="page-title">Dashboard</h2>
+    <p class="page-sub">${db.season} · Overview of seat utilisation and pending actions</p>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="num">${paid}</div><div class="lbl">Students With Tickets</div></div>
+      <div class="stat-box"><div class="num">${holdCount}</div><div class="lbl">Financial Holds</div></div>
+      <div class="stat-box"><div class="num">${pendingCollect}</div><div class="lbl">Pending Collection</div></div>
+      <div class="stat-box"><div class="num">${totalOcc}</div><div class="lbl">Total Seats Filled</div></div>
+    </div>
+
+    <div class="dash-section">
+      <div class="dash-section-head">
+        <div class="eyebrow">Venue Capacity</div>
+        <h3>Seat Utilisation</h3>
+      </div>
+      <div class="ring-card" style="max-width:260px;margin:0 auto 22px;">
+        <div class="ring-title">All Ceremonies Combined</div>
+        ${dial(totalPct, true)}
+        <div style="font-size:11.5px;color:var(--ink-soft);">${totalOcc} / ${totalCap} seats</div>
+      </div>
+      <div class="ring-grid">${ringsHTML}</div>
+      <div class="banner info" style="margin-top:16px;">
+        At 80% capacity a ceremony is flagged in red above for awareness only — ticket sales continue as normal. Decisions such as expanding venue space or lifting the guest limit remain manual, made by your team.
+      </div>
+    </div>
+
+    <div class="dash-section">
+      <div class="dash-section-head">
+        <div class="eyebrow">Finance</div>
+        <h3>Revenue Summary</h3>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-box" style="border-left-color:var(--maroon);"><div class="num">AED ${revenue.total.toLocaleString()}</div><div class="lbl">Total Revenue Collected</div></div>
+        <div class="stat-box"><div class="num">AED ${revenue.graduate.toLocaleString()}</div><div class="lbl">Graduate Ticket Revenue</div></div>
+        <div class="stat-box"><div class="num">AED ${revenue.guest.toLocaleString()}</div><div class="lbl">Guest Ticket Revenue</div></div>
+        <div class="stat-box"><div class="num">${revenue.graduateCount + revenue.guestCount}</div><div class="lbl">Total Tickets Sold</div></div>
+      </div>
+      <div class="chart-card">
+        <h4>Revenue by Ceremony</h4>
+        ${['C1','C2','C3','C4'].map(c=>hbar(ceremonyLabel(c), revenue.byCeremony[c], revenue.maxCeremony, 'var(--maroon)')).join('')}
+        <div class="chart-legend-note">Graduate ticket AED 325 · Guest ticket AED 375. Figures reflect tickets currently allocated in the system, from both counter and online payments.</div>
+      </div>
+    </div>
+
+    <div class="dash-section">
+      <div class="dash-section-head">
+        <div class="eyebrow">Sales Analysis</div>
+        <h3>Ticket Sales Overview</h3>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <h4>Ticket Sales Breakdown</h4>
+          ${hbar('1 Graduate Only', breakdown.gradOnly, bMax)}
+          ${hbar('1 Graduate + 1 Guest', breakdown.gradPlus1, bMax)}
+          ${hbar('1 Graduate + 2 Guests', breakdown.gradPlus2, bMax)}
+          ${hbar('Requests for Additional (Excess) Tickets', excessCount, bMax, 'var(--maroon)')}
+          <div class="chart-legend-note">Excess requests are tracked on the Waiting List tab pending Marketing approval.</div>
+        </div>
+        <div class="chart-card">
+          <h4>Ticket Sales by Programme</h4>
+          ${progEntries.length ? progEntries.map(([course,count])=>hbar(course,count,pMax)).join('') : '<p style="font-size:12.5px;color:var(--ink-soft);">No tickets purchased yet this season.</p>'}
+          <div class="chart-legend-note">Ranked by total tickets purchased (graduate + guest) per programme.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dash-section">
+      <div class="dash-section-head">
+        <div class="eyebrow">Reports</div>
+        <h3>Downloads</h3>
+      </div>
+      <div class="card">
+        <h4 style="font-size:13px;text-transform:uppercase;color:var(--ink-soft);letter-spacing:0.4px;margin-bottom:10px;">Ceremony-Wise Student Lists</h4>
+        <div class="btn-row" style="margin-bottom:20px;">
+          <button class="btn-outline btn-sm" onclick="downloadCeremonyList('C1')">Ceremony 1</button>
+          <button class="btn-outline btn-sm" onclick="downloadCeremonyList('C2')">Ceremony 2</button>
+          <button class="btn-outline btn-sm" onclick="downloadCeremonyList('C3')">Ceremony 3</button>
+          <button class="btn-outline btn-sm" onclick="downloadCeremonyList('C4')">Ceremony 4</button>
+          <button class="btn-gold btn-sm" onclick="downloadAllCeremonyLists()">All Ceremonies (4 files)</button>
+        </div>
+        <h4 style="font-size:13px;text-transform:uppercase;color:var(--ink-soft);letter-spacing:0.4px;margin-bottom:10px;">Ticket Collection Data</h4>
+        <button class="btn-outline btn-sm" onclick="downloadCollectionData()">Download Collection Status (CSV)</button>
+      </div>
+    </div>
+  `;
+}
+function dial(pct, big){
+  const size = big?170:140;
+  const color = pct>=80 ? 'var(--alert)' : 'var(--gold)';
+  return `
+    <div class="dial" style="width:${size}px;height:${size}px;background:conic-gradient(${color} ${pct*3.6}deg, #EFE7D6 0deg);">
+      <div class="dial-inner"><div class="pct">${pct}%</div><div class="seats">filled</div></div>
+    </div>`;
+}
+
+function adminAllocation(){
+  return `
+    <h2 class="page-title">Ceremony Allocation</h2>
+    <p class="page-sub">Search a student to allocate or reallocate them to a ceremony</p>
+    <div class="search-row">
+      <input type="text" id="alloc-search" placeholder="Enter Student ID — e.g. M00123458 or just 123458">
+      <button class="btn-primary" onclick="doAllocSearch()">Search</button>
+    </div>
+    <div id="alloc-result"></div>
+  `;
+}
+function doAllocSearch(){
+  const id=normalizeMisis(document.getElementById('alloc-search').value);
+  const rec=db.students[id];
+  const box=document.getElementById('alloc-result');
+  if(!rec){ box.innerHTML=`<div class="banner alert">No student found with ID ${id}.</div>`; return; }
+  const cap = rec.ceremony ? db.ceremonyOccupied[rec.ceremony] : 0;
+  const over = rec.ceremony && cap > db.ceremonyCapacity[rec.ceremony];
+  const hist = db.allocationHistory[id] || [];
+  box.innerHTML=`
+    <div class="result-card">
+      <div class="r-name">${rec.name}</div>
+      <div class="r-meta">${rec.course} · ${id}</div>
+      <div class="kv-grid">
+        <div class="k">Current Ceremony</div><div class="v">${ceremonyLabel(rec.ceremony)} ${over?'<span class="tag alert">Over Capacity</span>':''}</div>
+        <div class="k">Academic Standing</div><div class="v">${rec.standing||'—'}</div>
+        <div class="k">Status</div><div class="v">${rec.hold?'<span class="tag alert">Financial Hold</span>':rec.finalist?'<span class="tag warn">Finalist</span>':'<span class="tag success">Confirmed Graduate</span>'}</div>
+        <div class="k">Tickets Purchased</div><div class="v">${ticketSummaryLabel(rec.graduate,rec.guests)}</div>
+      </div>
+      <div class="field" style="margin-top:14px;">
+        <label>Allocate to Ceremony</label>
+        <select id="alloc-select">
+          <option value="C1" ${rec.ceremony==='C1'?'selected':''}>Ceremony 1 (${db.ceremonyOccupied.C1}/1000)</option>
+          <option value="C2" ${rec.ceremony==='C2'?'selected':''}>Ceremony 2 (${db.ceremonyOccupied.C2}/1000)</option>
+          <option value="C3" ${rec.ceremony==='C3'?'selected':''}>Ceremony 3 (${db.ceremonyOccupied.C3}/1000)</option>
+          <option value="C4" ${rec.ceremony==='C4'?'selected':''}>Ceremony 4 (${db.ceremonyOccupied.C4}/1000)</option>
+        </select>
+      </div>
+      <button class="btn-gold" onclick="allocateStudent('${id}')">Save Allocation</button>
+
+      ${hist.length? `<div class="divider"></div><div style="font-size:12px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;margin-bottom:6px;">Allocation History</div>
+      ${hist.map(h=>`<div class="history-item"><strong>${ceremonyLabel(h.from==='—'?'':h.from)} → ${ceremonyLabel(h.to)}</strong> — ${h.date} · by ${h.by}</div>`).join('')}` : ''}
+    </div>`;
+}
+function allocateStudent(id){
+  const rec=db.students[id];
+  const newC=document.getElementById('alloc-select').value;
+  const oldC=rec.ceremony||'—';
+  if(newC!==oldC){
+    if(!db.allocationHistory[id]) db.allocationHistory[id]=[];
+    db.allocationHistory[id].push({from:oldC,to:newC,date:new Date().toISOString().slice(0,10),by:'Academic Team'});
+    if(oldC!=='—') db.ceremonyOccupied[oldC]=Math.max(0,db.ceremonyOccupied[oldC]-1);
+    db.ceremonyOccupied[newC]=(db.ceremonyOccupied[newC]||0)+1;
+    rec.ceremony=newC;
+    db.auditLog.unshift({user:currentStaff.name+' — '+currentStaff.dept,email:currentStaff.email,dept:currentStaff.dept,action:`Reallocated ${id} from ${ceremonyLabel(oldC==='—'?'':oldC)} to ${ceremonyLabel(newC)}`,reason:'Manual allocation',time:new Date().toISOString().slice(0,16).replace('T',' ')});
+    alert('Ceremony updated. Student is now listed only in '+newC+'. An allocation email has been sent.');
+  }
+  doAllocSearchAgain(id);
+}
+function doAllocSearchAgain(id){
+  document.getElementById('alloc-search').value=id;
+  doAllocSearch();
+}
+
+function adminFinance(){
+  return `
+    <h2 class="page-title">Finance Entry</h2>
+    <p class="page-sub">Process payments received over the counter one at a time, or upload the online payment report to update many students at once.</p>
+    <div class="tab-pills">
+      <div class="tab-pill ${financeTab==='counter'?'active':''}" onclick="financeTab='counter';renderAdmin();">Over the Counter</div>
+      <div class="tab-pill ${financeTab==='bulk'?'active':''}" onclick="financeTab='bulk';renderAdmin();">Online Payments — Bulk Upload</div>
+    </div>
+    ${financeTab==='counter' ? financeCounterHTML() : financeBulkHTML()}
+  `;
+}
+function financeCounterHTML(){
+  return `
+    <div class="card">
+      <div class="field"><label>Student ID (MISIS)</label><input type="text" id="fin-misis" placeholder="e.g. M00123457 or just 123457"></div>
+      <div class="field"><label>Amount Received (AED)</label><input type="number" id="fin-amount" placeholder="e.g. 700"></div>
+      <button class="btn-primary" onclick="processFinance()">Process Payment</button>
+    </div>
+    <div id="fin-result"></div>
+    <div class="banner info">Graduate ticket: AED 325 · Guest ticket: AED 375 each. Formula subtracts 325 for graduate first, then splits the remainder into guest tickets. Use this tab for cash/card payments taken at the Finance Office counter.</div>
+  `;
+}
+function financeBulkHTML(){
+  const rows=db.ccavenueReport;
+  const pendingCount = rows.filter(r=>r.status==='pending').length;
+  return `
+    <div class="card">
+      <label>CCAvenue Online Payment Report</label>
+      <label class="upload-zone" id="upzone-bulk">
+        <input type="file" accept=".xlsx,.xls,.csv" onchange="handleBulkUpload(this)">
+        <div class="icon">📊</div>
+        <div class="lbl">Choose or drop today's CCAvenue report</div>
+      </label>
+      <small class="hint">A sample report has been pre-loaded below for this demo. In production this uploads and parses automatically — no need to enter each student manually.</small>
+    </div>
+    <table style="margin-bottom:16px;">
+      <thead><tr><th>MISIS</th><th>Name</th><th>Amount (AED)</th><th>Result</th><th></th></tr></thead>
+      <tbody>
+      ${rows.map((r,i)=>{
+        const valid={325:[1,0],700:[1,1],1075:[1,2],375:[0,1],750:[0,2]};
+        let resultCell;
+        if(r.status==='applied') resultCell='<span class="tag success">Applied</span>';
+        else if(r.status==='needs-review') resultCell='<span class="tag alert">Needs Review</span>';
+        else resultCell = valid[r.amount] ? '<span class="tag neutral">Ready</span>' : '<span class="tag warn">Will Flag</span>';
+        return `<tr>
+          <td>${r.misis}</td><td>${r.name}</td><td>${r.amount}</td>
+          <td>${resultCell}</td>
+          <td>${r.status==='needs-review' ? `<button class="btn-sm btn-outline" onclick="resolveBulkRow(${i})">Resolve</button>`:''}</td>
+        </tr>`;
+      }).join('')}
+      </tbody>
+    </table>
+    ${pendingCount>0 ? `<button class="btn-success" onclick="processBulk()">Process All Pending (${pendingCount})</button>` : '<div class="banner success">All rows in this report have been processed.</div>'}
+  `;
+}
+function handleBulkUpload(input){
+  const zone=document.getElementById('upzone-bulk');
+  if(input.files.length){
+    zone.classList.add('has-file');
+    zone.querySelector('.lbl').textContent='✓ '+input.files[0].name+' — parsed, see rows below';
+  }
+}
+function processBulk(){
+  const valid={325:[1,0],700:[1,1],1075:[1,2],375:[0,1],750:[0,2]};
+  let appliedCount=0, flaggedCount=0;
+  db.ccavenueReport.forEach(r=>{
+    if(r.status!=='pending') return;
+    const rec=db.students[r.misis];
+    if(!rec){ r.status='needs-review'; flaggedCount++; return; }
+    if(valid[r.amount]){
+      const [g,gu]=valid[r.amount];
+      rec.graduate=Math.min(1,rec.graduate+g);
+      rec.guests=Math.min(2,rec.guests+gu);
+      rec.lastUpdate=new Date().toISOString().slice(0,10);
+      r.status='applied';
+      appliedCount++;
+      db.auditLog.unshift({user:currentStaff.name+' — '+currentStaff.dept,email:currentStaff.email,dept:currentStaff.dept,action:`Allocated ${ticketSummaryLabel(g,gu)} to ${r.misis} (AED ${r.amount})`,reason:'CCAvenue report — standard package match, bulk upload',time:new Date().toISOString().slice(0,16).replace('T',' ')});
+    } else {
+      r.status='needs-review';
+      flaggedCount++;
+    }
+  });
+  alert(`Bulk processing complete.\n${appliedCount} student(s) auto-updated.\n${flaggedCount} row(s) flagged for manual review.`);
+  renderAdmin();
+}
+function resolveBulkRow(i){
+  const r=db.ccavenueReport[i];
+  pendingAmbiguous={id:r.misis, amount:r.amount, bulkIndex:i};
+  document.getElementById('ambiguous-msg').textContent = `AED ${r.amount} paid by ${r.name} (${r.misis}) via CCAvenue doesn't match a standard package. Please confirm what was actually purchased.`;
+  document.getElementById('ambiguous-modal').classList.add('active');
+}
+function processFinance(){
+  const id=normalizeMisis(document.getElementById('fin-misis').value);
+  const amount=parseFloat(document.getElementById('fin-amount').value);
+  const rec=db.students[id];
+  const box=document.getElementById('fin-result');
+  if(!rec){ box.innerHTML=`<div class="banner alert">No student found with ID ${id}.</div>`; return; }
+  if(!amount){ box.innerHTML=`<div class="banner alert">Enter a valid amount.</div>`; return; }
+
+  const valid={325:[1,0],700:[1,1],1075:[1,2],375:[0,1],750:[0,2]};
+  if(valid[amount]){
+    const [g,gu]=valid[amount];
+    rec.graduate=Math.min(1,rec.graduate+g);
+    rec.guests=Math.min(2,rec.guests+gu);
+    rec.lastUpdate=new Date().toISOString().slice(0,10);
+    db.auditLog.unshift({user:currentStaff.name+' — '+currentStaff.dept,email:currentStaff.email,dept:currentStaff.dept,action:`Allocated ${ticketSummaryLabel(g,gu)} to ${id} (AED ${amount})`,reason:'Standard package match — counter payment',time:new Date().toISOString().slice(0,16).replace('T',' ')});
+    box.innerHTML=`<div class="banner success"><strong>${rec.name}</strong> — AED ${amount} matched a standard package. Allocated: ${ticketSummaryLabel(g,gu)}. Row highlighted yellow. Reminder email scheduled for end of day.</div>`;
+  } else {
+    pendingAmbiguous={id,amount};
+    document.getElementById('ambiguous-msg').textContent = `AED ${amount} paid by ${rec.name} (${id}) doesn't match a standard package. Please confirm what was actually purchased.`;
+    document.getElementById('ambiguous-modal').classList.add('active');
+  }
+}
+function closeAmbiguousModal(){ document.getElementById('ambiguous-modal').classList.remove('active'); pendingAmbiguous=null; }
+function confirmManualAllocation(){
+  const val=document.getElementById('manual-alloc-select').value;
+  if(!val){alert('Select what was purchased');return;}
+  const valid={325:[1,0],700:[1,1],1075:[1,2],375:[0,1],750:[0,2]};
+  const [g,gu]=valid[val];
+  const rec=db.students[pendingAmbiguous.id];
+  rec.graduate=Math.min(1,rec.graduate+g);
+  rec.guests=Math.min(2,rec.guests+gu);
+  const note=document.getElementById('manual-alloc-note').value;
+  db.auditLog.unshift({user:currentStaff.name+' — '+currentStaff.dept,email:currentStaff.email,dept:currentStaff.dept,action:`Manually allocated ${ticketSummaryLabel(g,gu)} to ${pendingAmbiguous.id} (AED ${pendingAmbiguous.amount}, ambiguous)`,reason:note||'Manually verified',time:new Date().toISOString().slice(0,16).replace('T',' ')});
+  if(pendingAmbiguous.bulkIndex!==undefined){
+    db.ccavenueReport[pendingAmbiguous.bulkIndex].status='applied';
+  }
+  closeAmbiguousModal();
+  renderAdmin();
+}
+
+function adminHold(){
+  const holds=Object.entries(db.students).filter(([id,s])=>s.hold);
+  return `
+    <h2 class="page-title">Financial Hold</h2>
+    <p class="page-sub">Students with outstanding balances. Cleared status is based on the uploaded balance report (negative or under 50 AED = cleared).</p>
+    <table>
+      <thead><tr><th>MISIS</th><th>Name</th><th>Type</th><th>Balance (AED)</th><th>Status</th><th>Actions</th></tr></thead>
+      <tbody>
+      ${holds.map(([id,s])=>{
+        const cleared = s.balance < 0 || s.balance < 50;
+        return `<tr>
+          <td>${id}</td><td>${s.name}</td><td>${s.holdType}</td><td>${s.balance}</td>
+          <td>${cleared?'<span class="tag success">Cleared</span>':'<span class="tag alert">Outstanding</span>'}</td>
+          <td>
+            ${cleared ? `<button class="btn-sm btn-gold" onclick="notifyAcademics('${id}')">Notify Academic Team</button>` : ''}
+            <button class="btn-sm btn-outline" onclick="openOverrideModal('${id}')">Allow Purchase</button>
+          </td>
+        </tr>`;
+      }).join('')}
+      </tbody>
+    </table>
+    <div class="banner warn" style="margin-top:16px;">"Allow Purchase" bypasses the hold for this student's ticket allocation only, and always requires a reason. It does not depend on the balance report — finance or marketing can approve case by case.</div>
+  `;
+}
+function notifyAcademics(id){
+  db.auditLog.unshift({user:currentStaff.name+' — '+currentStaff.dept,email:currentStaff.email,dept:currentStaff.dept,action:`Notified DAR & Campus Central — ${id} balance cleared`,reason:'Balance report shows cleared',time:new Date().toISOString().slice(0,16).replace('T',' ')});
+  alert('DAR & Campus Central notified. They can allocate a ceremony for this student from the Ceremony Allocation tab.');
+}
+function openOverrideModal(id){
+  pendingOverrideMisis=id;
+  document.getElementById('override-student-name').value = db.students[id].name + ' ('+id+')';
+  document.getElementById('override-modal').classList.add('active');
+}
+function closeOverrideModal(){ document.getElementById('override-modal').classList.remove('active'); pendingOverrideMisis=null; }
+function confirmOverride(){
+  const reason=document.getElementById('override-reason').value.trim();
+  if(!reason){alert('A reason is required to approve this override.');return;}
+  const opt=document.getElementById('override-ticket-select').value;
+  const rec=db.students[pendingOverrideMisis];
+  const map={grad:[1,0],grad1guest:[1,1],grad2guest:[1,2]};
+  const [g,gu]=map[opt];
+  rec.graduate=Math.min(1,rec.graduate+g);
+  rec.guests=Math.min(2,rec.guests+gu);
+  db.auditLog.unshift({user:currentStaff.name+' — '+currentStaff.dept,email:currentStaff.email,dept:currentStaff.dept,action:`Override allocation for ${pendingOverrideMisis} despite financial hold`,reason:reason,time:new Date().toISOString().slice(0,16).replace('T',' ')});
+  closeOverrideModal();
+  alert('Tickets allocated despite financial hold. Reason logged in audit trail.');
+  renderAdmin();
+}
+
+function adminCollection(){
+  const list=Object.entries(db.students).filter(([id,s])=>s.graduate||s.guests);
+  return `
+    <h2 class="page-title">Ticket Collection</h2>
+    <p class="page-sub">Search or browse students who have paid. Mark as Collected when tickets are handed over.</p>
+    <div class="btn-row" style="margin-bottom:14px;">
+      <button class="btn-outline btn-sm" onclick="alert('Exporting PDF/CSV backup list for ceremony day...')">Export Backup List (PDF/CSV)</button>
+    </div>
+    <table>
+      <thead><tr><th>MISIS</th><th>Name</th><th>Ceremony</th><th>Tickets</th><th>Reminder</th><th>Status</th><th></th></tr></thead>
+      <tbody>
+      ${list.map(([id,s])=>`
+        <tr>
+          <td>${id}</td><td>${s.name}</td><td>${ceremonyLabel(s.ceremony)}</td>
+          <td>${ticketSummaryLabel(s.graduate,s.guests)}</td>
+          <td>${s.collected? '<span class="tag neutral">Stopped</span>' : (s.lastUpdate? 'Next: '+nextReminder(s.lastUpdate) : '—')}</td>
+          <td>${s.collected? '<span class="tag success">Collected</span>' : '<span class="tag warn">Awaiting Pickup</span>'}</td>
+          <td>${!s.collected? `<button class="btn-sm btn-success" onclick="markCollected('${id}')">Mark Collected</button>`:''}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>
+    <div class="banner info" style="margin-top:16px;">First reminder is sent same day as the ticket count update. Follow-up reminders repeat every 2 weeks until marked Collected, then stop automatically.</div>
+  `;
+}
+function nextReminder(dateStr){
+  const d=new Date(dateStr); d.setDate(d.getDate()+14);
+  return d.toISOString().slice(0,10);
+}
+function markCollected(id){
+  db.students[id].collected=true;
+  db.auditLog.unshift({user:currentStaff.name+' — '+currentStaff.dept,email:currentStaff.email,dept:currentStaff.dept,action:`Marked ${id} as Collected`,reason:'—',time:new Date().toISOString().slice(0,16).replace('T',' ')});
+  alert('Marked as collected. Reminder emails for this student will stop.');
+  renderAdmin();
+}
+
+function adminUpload(){
+  return `
+    <h2 class="page-title">Data Upload</h2>
+    <p class="page-sub">Upload the daily live sheet. The system reads all tabs automatically: Main List, C1–C4, Financial Hold (Confirmed), Financial Hold (Potential).</p>
+    <div class="card">
+      <label>Graduation List (.xlsx)</label>
+      <label class="upload-zone" id="upzone1">
+        <input type="file" accept=".xlsx,.xls,.csv" onchange="handleUpload(this,'upzone1')">
+        <div class="icon">📄</div>
+        <div class="lbl">Choose or drop the live graduation sheet</div>
+      </label>
+      <small class="hint">Expected tabs: Main List · C1 · C2 · C3 · C4 · Financial Hold – Confirmed Graduate · Financial Hold – Potential Graduate</small>
+    </div>
+    <div class="card">
+      <label>Student Balance Report (SAP export)</label>
+      <label class="upload-zone" id="upzone2">
+        <input type="file" accept=".xlsx,.xls,.csv" onchange="handleUpload(this,'upzone2')">
+        <div class="icon">💳</div>
+        <div class="lbl">Choose or drop the balance report</div>
+      </label>
+      <small class="hint">Negative balance or under 50 AED is treated as cleared for financial hold purposes.</small>
+    </div>
+    <div class="card">
+      <label>Programme → Ceremony Mapping (published by Marketing)</label>
+      <label class="upload-zone" id="upzone3">
+        <input type="file" accept=".xlsx,.xls,.csv" onchange="handleUpload(this,'upzone3')">
+        <div class="icon">🎓</div>
+        <div class="lbl">Choose or drop this season's mapping list</div>
+      </label>
+      <small class="hint">Used to suggest a ceremony automatically when Academic Team allocates a student.</small>
+    </div>
+    <div class="card">
+      <label>Weekly SAP GL Invoice Report</label>
+      <label class="upload-zone" id="upzone4">
+        <input type="file" accept=".xlsx,.xls,.csv" onchange="handleGLUpload(this)">
+        <div class="icon">🧾</div>
+        <div class="lbl">Choose or drop this week's GL invoice report</div>
+      </label>
+      <small class="hint">Matches paid students against invoiced entries in SAP. Anyone who has purchased tickets but isn't in this report stays flagged "Not Invoiced" on the Master List until the following week's report confirms it.</small>
+    </div>
+    <div class="card">
+      <label>Student MDX Email Directory</label>
+      <label class="upload-zone" id="upzone5">
+        <input type="file" accept=".xlsx,.xls,.csv" onchange="handleUpload(this,'upzone5')">
+        <div class="icon">✉️</div>
+        <div class="lbl">Choose or drop the MISIS → MDX email mapping</div>
+      </label>
+      <small class="hint">Used to send the one-time verification code to each student's official MDX email during the eligibility check. See the Reconciliation tab for how this ties into verification.</small>
+    </div>
+  `;
+}
+function handleGLUpload(input){
+  const zone=document.getElementById('upzone4');
+  if(!input.files.length) return;
+  zone.classList.add('has-file');
+  zone.querySelector('.lbl').textContent='✓ '+input.files[0].name+' — matched against paid students';
+  let matched=0;
+  Object.values(db.students).forEach(s=>{
+    if((s.graduate||s.guests) && !s.invoiced){ s.invoiced=true; matched++; }
+  });
+  logAction(`Uploaded weekly SAP GL invoice report (${input.files[0].name})`, `${matched} student(s) matched and marked as invoiced`);
+  alert(`GL report processed.\n${matched} student(s) matched and marked as Invoiced on the Master List.`);
+}
+function handleUpload(input,zoneId){
+  const zone=document.getElementById(zoneId);
+  if(input.files.length){
+    zone.classList.add('has-file');
+    zone.querySelector('.lbl').textContent='✓ '+input.files[0].name+' — parsed successfully';
+  }
+}
+
+function csvDownload(filename, rows){
+  const csv = rows.map(row => row.map(cell => {
+    const s = String(cell===undefined||cell===null?'':cell);
+    return /[",\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s;
+  }).join(',')).join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+function downloadCeremonyList(ceremonyCode){
+  const header=['MISIS','Name','Programme','Academic Standing','Tickets Purchased','Collected'];
+  const rows = Object.entries(db.students).filter(([id,s])=>s.ceremony===ceremonyCode).map(([id,s])=>[
+    id, s.name, s.course, s.standing||'', ticketSummaryLabel(s.graduate,s.guests),
+    (s.graduate||s.guests)?(s.collected?'Yes':'No'):''
+  ]);
+  csvDownload(`${ceremonyLabel(ceremonyCode).replace(' ','-')}-list-${db.season.replace(' ','-')}.csv`, [header, ...rows]);
+}
+function downloadAllCeremonyLists(){
+  ['C1','C2','C3','C4'].forEach(c=>downloadCeremonyList(c));
+}
+function downloadCollectionData(){
+  const header=['MISIS','Name','Ceremony','Tickets Purchased','Collected','Last Update','Next Reminder Due'];
+  const rows = Object.entries(db.students).filter(([id,s])=>s.graduate||s.guests).map(([id,s])=>[
+    id, s.name, ceremonyLabel(s.ceremony), ticketSummaryLabel(s.graduate,s.guests),
+    s.collected?'Yes':'No', s.lastUpdate||'', (!s.collected && s.lastUpdate) ? nextReminder(s.lastUpdate) : ''
+  ]);
+  csvDownload(`ticket-collection-data-${db.season.replace(' ','-')}.csv`, [header, ...rows]);
+}
+
+function adminWaitlist(){
+  const rows=db.ticketRequests;
+  return `
+    <h2 class="page-title">Extra Tickets — Waiting List</h2>
+    <p class="page-sub">Students requesting tickets beyond the standard 1 Graduate + 2 Guest limit. Forwarded to Jotform for Marketing to review and approve as capacity allows.</p>
+    <table>
+      <thead><tr><th>MISIS</th><th>Name</th><th>Ceremony</th><th>Extra Tickets Requested</th><th>Date Submitted</th><th>Status</th><th>Actions</th></tr></thead>
+      <tbody>
+      ${rows.map((r,i)=>{
+        const rec=db.students[r.misis];
+        return `<tr>
+          <td>${r.misis}</td><td>${r.name}</td><td>${rec?ceremonyLabel(rec.ceremony):'—'}</td><td>${r.extra}</td><td>${r.date}</td>
+          <td>${r.status==='Approved'?'<span class="tag success">Approved</span>':r.status==='Denied'?'<span class="tag alert">Denied</span>':'<span class="tag warn">Pending Review</span>'}</td>
+          <td>
+            ${r.status==='Pending' ? `
+              <button class="btn-sm btn-outline" onclick="alert('Opening Jotform submission for ${r.misis}...')">View on Jotform</button>
+              <button class="btn-sm btn-success" onclick="waitlistDecision(${i},'Approved')">Approve</button>
+              <button class="btn-sm btn-outline" style="color:var(--alert);border-color:var(--alert);" onclick="waitlistDecision(${i},'Denied')">Deny</button>
+            ` : '—'}
+          </td>
+        </tr>`;
+      }).join('')}
+      </tbody>
+    </table>
+    <div class="banner info" style="margin-top:16px;">Approving here logs the decision and notifies the student by email. It does not automatically allocate tickets — allocate the approved extra tickets from Finance Entry or Ceremony Allocation once capacity is confirmed.</div>
+  `;
+}
+function waitlistDecision(i,decision){
+  const r=db.ticketRequests[i];
+  r.status=decision;
+  db.auditLog.unshift({user:currentStaff.name+' — '+currentStaff.dept,email:currentStaff.email,dept:currentStaff.dept,action:`${decision} extra ticket request for ${r.misis} (${r.extra} requested)`,reason:'Reviewed via Waiting List',time:new Date().toISOString().slice(0,16).replace('T',' ')});
+  alert(`Request ${decision.toLowerCase()}. Student will be notified by email.`);
+  renderAdmin();
+}
+
+let masterFilterCeremony='ALL';
+let masterFilterText='';
+function computeRevenueSummary(){
+  const revenue = { total:0, graduate:0, guest:0, graduateCount:0, guestCount:0, byCeremony:{C1:0,C2:0,C3:0,C4:0} };
+  Object.values(db.students).forEach(s=>{
+    const gradRev = s.graduate*325, guestRev = s.guests*375;
+    revenue.graduate += gradRev; revenue.guest += guestRev;
+    revenue.graduateCount += s.graduate; revenue.guestCount += s.guests;
+    if(s.ceremony && revenue.byCeremony[s.ceremony]!==undefined) revenue.byCeremony[s.ceremony] += gradRev+guestRev;
+  });
+  revenue.total = revenue.graduate + revenue.guest;
+  revenue.maxCeremony = Math.max(...Object.values(revenue.byCeremony), 1);
+  return revenue;
+}
+
+let reconSapLedgerTotal = null;
+
+function adminReconciliation(){
+  const revenue = computeRevenueSummary();
+  const invoicedRevenue = Object.values(db.students).reduce((sum,s)=>sum + (s.invoiced ? s.graduate*325 + s.guests*375 : 0), 0);
+  const notInvoicedRevenue = revenue.total - invoicedRevenue;
+  const notInvoicedCount = Object.values(db.students).filter(s=>(s.graduate||s.guests) && !s.invoiced).length;
+
+  const totalHeadcount = revenue.graduateCount + revenue.guestCount;
+  const collectedHeadcount = Object.values(db.students).reduce((sum,s)=>sum + (s.collected ? s.graduate+s.guests : 0), 0);
+  const outstandingHeadcount = totalHeadcount - collectedHeadcount;
+  const approvedWaitlist = db.ticketRequests.filter(r=>r.status==='Approved');
+  const approvedNotYetAllocated = approvedWaitlist.length;
+
+  const sapVariance = reconSapLedgerTotal===null ? null : (revenue.total - reconSapLedgerTotal);
+
+  return `
+    <h2 class="page-title">Reconciliation</h2>
+    <p class="page-sub">${db.season} · Cross-checks between what the system has allocated and what Finance and Marketing have separately recorded</p>
+
+    <div class="dash-section" style="margin-top:0;">
+      <div class="dash-section-head">
+        <div class="eyebrow">Finance</div>
+        <h3>Revenue Reconciliation</h3>
+      </div>
+      <div class="card">
+        <div class="kv-grid" style="margin-bottom:14px;">
+          <div class="k">System Revenue (tickets allocated)</div><div class="v">AED ${revenue.total.toLocaleString()}</div>
+          <div class="k">Confirmed Invoiced (GL matched)</div><div class="v">AED ${invoicedRevenue.toLocaleString()}</div>
+          <div class="k">Awaiting GL Match</div><div class="v">AED ${notInvoicedRevenue.toLocaleString()} (${notInvoicedCount} student${notInvoicedCount===1?'':'s'})</div>
+        </div>
+        <div class="divider"></div>
+        <label>SAP Ledger Total for This Period (entered manually by Finance)</label>
+        <div class="btn-row">
+          <input type="number" id="sap-ledger-input" placeholder="e.g. 285000" value="${reconSapLedgerTotal===null?'':reconSapLedgerTotal}" style="max-width:220px;">
+          <button class="btn-primary btn-sm" onclick="setSapLedgerTotal()">Compare to System Revenue</button>
+        </div>
+        ${sapVariance!==null ? `
+          <div class="banner ${sapVariance===0?'success':'alert'}" style="margin-top:14px;">
+            ${sapVariance===0
+              ? 'Matched. System revenue and the SAP ledger total agree exactly.'
+              : `Variance of AED ${Math.abs(sapVariance).toLocaleString()} — system shows ${sapVariance>0?'more':'less'} revenue than the SAP ledger. Check for pending online payments (48-hour processing), unrecorded counter payments, or refunds before closing this period.`}
+          </div>` : ''}
+      </div>
+    </div>
+
+    <div class="dash-section">
+      <div class="dash-section-head">
+        <div class="eyebrow">Marketing</div>
+        <h3>Ticket Count Reconciliation</h3>
+      </div>
+      <div class="card">
+        <div class="kv-grid">
+          <div class="k">Total Tickets Allocated</div><div class="v">${totalHeadcount}</div>
+          <div class="k">Tickets Collected</div><div class="v">${collectedHeadcount}</div>
+          <div class="k">Outstanding for Collection</div><div class="v">${outstandingHeadcount}</div>
+          <div class="k">Approved Waiting List (not yet allocated)</div><div class="v">${approvedNotYetAllocated}</div>
+        </div>
+        <div class="banner info" style="margin-top:14px;">
+          Marketing reconciles by comparing physical ticket stock issued at the collection desk against the "Collected" count here, and confirms every approved Waiting List request has actually been allocated in Finance Entry or Ceremony Allocation — not just marked approved.
+        </div>
+      </div>
+    </div>
+
+    <div class="dash-section">
+      <div class="dash-section-head">
+        <div class="eyebrow">Process</div>
+        <h3>Suggested Reconciliation Cadence</h3>
+      </div>
+      <div class="card">
+        <ul class="mind-list">
+          <li><strong>Daily (Finance):</strong> match same-day counter payments and CCAvenue bulk report entries against tickets allocated in the system — any gap gets flagged and resolved before end of day.</li>
+          <li><strong>Weekly (Finance):</strong> upload the SAP GL invoice report; anything paid but still "Not Invoiced" after the upload gets a manual follow-up.</li>
+          <li><strong>Weekly (Marketing):</strong> compare "Collected" counts here against physical stock handed out, and confirm reminder emails are stopping only for genuinely collected students.</li>
+          <li><strong>Before each ceremony:</strong> reconcile final seat counts against the printed collection list, and reconcile any Waiting List approvals into actual allocations.</li>
+        </ul>
+      </div>
+    </div>
+  `;
+}
+function setSapLedgerTotal(){
+  const val=parseFloat(document.getElementById('sap-ledger-input').value);
+  reconSapLedgerTotal = isNaN(val) ? null : val;
+  logAction('Entered SAP ledger total for reconciliation', reconSapLedgerTotal!==null ? `AED ${reconSapLedgerTotal}` : 'cleared');
+  renderAdmin();
+}
+
+function adminMaster(){
+  return `
+    <h2 class="page-title">Master List — Graduation</h2>
+    <p class="page-sub">${db.season} · Full record shared across Finance, Marketing and DAR &amp; Campus Central</p>
+    <div class="btn-row" style="margin-bottom:14px;">
+      <button class="btn-outline btn-sm" onclick="downloadMasterList()">Download Master List (CSV)</button>
+    </div>
+    <div class="master-filter-bar">
+      <div class="field" style="margin-bottom:0;min-width:190px;">
+        <label>Filter by Ceremony</label>
+        <select id="master-ceremony-filter" onchange="masterFilterCeremony=this.value; renderMasterTable();">
+          <option value="ALL" ${masterFilterCeremony==='ALL'?'selected':''}>All Ceremonies</option>
+          <option value="C1" ${masterFilterCeremony==='C1'?'selected':''}>Ceremony 1</option>
+          <option value="C2" ${masterFilterCeremony==='C2'?'selected':''}>Ceremony 2</option>
+          <option value="C3" ${masterFilterCeremony==='C3'?'selected':''}>Ceremony 3</option>
+          <option value="C4" ${masterFilterCeremony==='C4'?'selected':''}>Ceremony 4</option>
+          <option value="NONE" ${masterFilterCeremony==='NONE'?'selected':''}>Not Allocated</option>
+        </select>
+      </div>
+      <div class="field" style="margin-bottom:0;flex:1;min-width:220px;">
+        <label>Search Any Column</label>
+        <input type="text" id="master-text-filter" value="${masterFilterText}" placeholder="Search name, MISIS, programme, standing, invoice status…" oninput="masterFilterText=this.value; renderMasterTable();">
+      </div>
+    </div>
+    <table>
+      <thead><tr>
+        <th>MISIS</th><th>Name</th><th>Programme</th><th>Academic Standing</th>
+        <th>Financial Hold</th><th>Ceremony</th><th>Tickets Purchased</th><th>Collected</th><th>Invoiced</th><th></th>
+      </tr></thead>
+      <tbody id="master-tbody"></tbody>
+    </table>
+  `;
+}
+function renderMasterTable(){
+  const tbody=document.getElementById('master-tbody');
+  if(!tbody) return;
+  const filterText=(masterFilterText||'').toLowerCase();
+  const rows=Object.entries(db.students).filter(([id,s])=>{
+    if(['C1','C2','C3','C4'].includes(masterFilterCeremony) && s.ceremony!==masterFilterCeremony) return false;
+    if(masterFilterCeremony==='NONE' && s.ceremony) return false;
+    if(filterText){
+      const invoiceText = (s.graduate||s.guests) ? (s.invoiced?'invoiced':'not invoiced') : '';
+      const haystack=[id,s.name,s.course,s.standing,s.hold?'yes hold':'no hold',ceremonyLabel(s.ceremony),ticketSummaryLabel(s.graduate,s.guests),(s.graduate||s.guests)?(s.collected?'collected yes':'collected no'):'',invoiceText].join(' ').toLowerCase();
+      if(!haystack.includes(filterText)) return false;
+    }
+    return true;
+  });
+  tbody.innerHTML = rows.length ? rows.map(([id,s])=>`
+    <tr>
+      <td>${id}</td>
+      <td>${s.name}</td>
+      <td>${s.course}</td>
+      <td>${s.standing||'—'}</td>
+      <td>${s.hold? '<span class="tag alert">Yes</span>' : '<span class="tag success">No</span>'}</td>
+      <td>${ceremonyLabel(s.ceremony)}</td>
+      <td>${ticketSummaryLabel(s.graduate,s.guests)}</td>
+      <td>${(s.graduate||s.guests) ? (s.collected? '<span class="tag success">Yes</span>' : '<span class="tag warn">No</span>') : '—'}</td>
+      <td>${(s.graduate||s.guests) ? (s.invoiced? '<span class="tag success">Yes</span>' : '<span class="tag alert">No</span>') : '—'}</td>
+      <td>${(s.graduate||s.guests) && !s.invoiced ? `<button class="btn-sm btn-outline" onclick="markInvoiced('${id}')">Mark Invoiced</button>` : ''}</td>
+    </tr>`).join('') : `<tr><td colspan="10" style="text-align:center;color:var(--ink-soft);padding:20px;">No matching students found.</td></tr>`;
+}
+function markInvoiced(id){
+  db.students[id].invoiced=true;
+  logAction(`Manually marked ${id} as Invoiced`,'Confirmed against GL invoice report');
+  renderMasterTable();
+}
+function downloadMasterList(){
+  const header=['MISIS','Name','Programme','Academic Standing','Financial Hold','Ceremony','Tickets Purchased','Collected','Invoiced'];
+  const rows=Object.entries(db.students).map(([id,s])=>[
+    id, s.name, s.course, s.standing||'', s.hold?'Yes':'No', ceremonyLabel(s.ceremony),
+    ticketSummaryLabel(s.graduate,s.guests), (s.graduate||s.guests)?(s.collected?'Yes':'No'):'',
+    (s.graduate||s.guests)?(s.invoiced?'Yes':'No'):''
+  ]);
+  csvDownload(`master-list-${db.season.replace(' ','-')}.csv`, [header, ...rows]);
+}
+
+function adminAudit(){
+  return `
+    <h2 class="page-title">Audit Log</h2>
+    <p class="page-sub">Every correction and manual action, with staff name, email, department, reason, and time.</p>
+    <div class="btn-row" style="margin-bottom:14px;">
+      <button class="btn-outline btn-sm" onclick="downloadAuditLog()">Download Change History (CSV)</button>
+    </div>
+    <table>
+      <thead><tr><th>Time</th><th>Staff Name</th><th>Email</th><th>Department</th><th>Action</th><th>Reason</th></tr></thead>
+      <tbody>
+      ${db.auditLog.map(a=>`<tr><td>${a.time}</td><td>${(a.user||'').split(' — ')[0]}</td><td>${a.email||'—'}</td><td>${a.dept||'—'}</td><td>${a.action}</td><td>${a.reason}</td></tr>`).join('')}
+      </tbody>
+    </table>
+  `;
+}
+function downloadAuditLog(){
+  const header=['Time','Staff Name','Email','Department','Action','Reason'];
+  const rows=db.auditLog.map(a=>[a.time, (a.user||'').split(' — ')[0], a.email||'', a.dept||'', a.action, a.reason]);
+  csvDownload('audit-log-change-history.csv', [header, ...rows]);
+}
+
+/* init */
+renderStudent();
+</script>
+</body>
+</html>
