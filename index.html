@@ -260,6 +260,125 @@ tr:hover td{background:#FBF9F4;}
   .admin-nav button{white-space:nowrap;border-left:none;border-bottom:3px solid transparent;padding:10px 16px;}
   .admin-nav button.active{border-left:none;border-bottom-color:var(--gold);}
 }
+
+/* ===== MDX.AC.AE FAITHFUL REPLICA (scoped to #view-student only; admin untouched) ===== */
+#view-student{
+  --maroon:#E6051F;
+  --maroon-dark:#B8041A;
+  --maroon-light:#FF3350;
+  --purple:#2F255C;
+  --gold:#1A1A1A;
+  --gold-light:#4A4A4A;
+  --cream:#FFFFFF;
+  --ink:#212529;
+  --ink-soft:#54595F;
+  --surface:#FFFFFF;
+  --line:#E5E5E5;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+#view-student h1,#view-student h2,#view-student h3,#view-student h4{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+
+/* nav */
+#view-student .mdx-nav{background:var(--purple);padding:14px 0;position:sticky;top:0;z-index:50;}
+#view-student .mdx-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+#view-student .mdx-nav-brand{display:flex;align-items:center;gap:10px;}
+#view-student .mdx-nav-brand img{height:40px;width:auto;display:block;}
+#view-student .mdx-nav-right{display:flex;align-items:center;gap:16px;}
+#view-student .mdx-pill{border:1.5px solid #fff;color:#fff;background:transparent;border-radius:20px;padding:8px 18px;font-size:12.5px;font-weight:700;text-decoration:none;white-space:nowrap;}
+#view-student .mdx-pill:hover{background:#fff;color:var(--purple);}
+#view-student .mdx-nav-right a.mdx-admin-link{color:#EDE3D3;font-size:11.5px;text-decoration:none;font-weight:600;}
+#view-student .mdx-nav-right a.mdx-admin-link:hover{color:var(--maroon-light);}
+
+/* hero */
+#view-student .mdx-hero{
+  position:relative;min-height:420px;display:flex;align-items:flex-end;
+  background:linear-gradient(0deg,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.25) 55%,rgba(0,0,0,0.15) 100%),url('https://api.mdx.ac.ae/uploads/graduation_news_2025_1_5c143ceaae.jpg') center/cover no-repeat;
+  padding:0;
+}
+#view-student .mdx-hero .wrap{padding-bottom:36px;}
+#view-student .mdx-hero .eyebrow{font-size:26px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;font-style:italic;margin-bottom:2px;}
+#view-student .mdx-hero h1{font-size:56px;font-weight:900;letter-spacing:1px;line-height:1;margin:0;color:#fff;text-transform:uppercase;}
+@media(max-width:700px){#view-student .mdx-hero{min-height:320px;} #view-student .mdx-hero h1{font-size:38px;} #view-student .mdx-hero .eyebrow{font-size:19px;}}
+
+/* date/location boxes */
+#view-student .mdx-info-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:28px 0 0;}
+@media(max-width:700px){#view-student .mdx-info-row{grid-template-columns:1fr;}}
+#view-student .mdx-info-box{background:var(--maroon);color:#fff;border-radius:6px;padding:30px 20px;text-align:center;}
+#view-student .mdx-info-box .icon{font-size:30px;margin-bottom:10px;}
+#view-student .mdx-info-box .lbl{font-size:14px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;}
+#view-student .mdx-info-box .val{font-size:17px;font-weight:700;}
+
+/* eligibility checker box */
+#view-student .mdx-eligibility-row{padding:20px 0 0;}
+#view-student .mdx-eligibility-box{background:var(--surface);border:2px solid var(--maroon);border-radius:6px;padding:0;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,0.08);}
+#view-student .mdx-eligibility-box .mdx-elig-head{background:var(--maroon);color:#fff;padding:16px 24px;font-size:15px;font-weight:800;letter-spacing:1px;text-transform:uppercase;text-align:center;}
+#view-student .mdx-eligibility-box .mdx-elig-body{padding:28px;}
+#view-student .portal-card{box-shadow:none;border:none;padding:0;}
+#view-student .seal{background:var(--maroon);}
+
+/* almost here */
+#view-student .mdx-almost{padding:44px 0 0;}
+#view-student .mdx-almost h2{font-size:32px;font-weight:800;color:var(--ink);margin-bottom:16px;text-transform:uppercase;}
+#view-student .mdx-almost p{font-size:15px;color:var(--ink);line-height:1.8;margin-bottom:14px;}
+#view-student .mdx-almost img{width:100%;border-radius:6px;display:block;margin:24px 0;}
+
+/* full red banners */
+#view-student .mdx-red-box{background:var(--maroon);color:#fff;border-radius:6px;padding:26px 30px;margin:20px 0;}
+#view-student .mdx-red-box h3{color:#fff;font-size:19px;font-weight:800;margin-bottom:10px;}
+#view-student .mdx-red-box p{font-size:14.5px;line-height:1.75;margin-bottom:6px;}
+#view-student .mdx-red-box strong{font-weight:800;}
+
+/* ticket price cards */
+#view-student .section-head{text-align:left;margin-bottom:18px;}
+#view-student .section-head h2{text-transform:uppercase;font-weight:800;font-size:26px;color:var(--ink);}
+#view-student .mdx-price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:22px 0;}
+@media(max-width:700px){#view-student .mdx-price-grid{grid-template-columns:1fr 1fr;}}
+#view-student .mdx-price-card{border-radius:6px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,0.1);}
+#view-student .mdx-price-card .mpc-head{background:var(--maroon);color:#fff;font-weight:800;font-size:16px;padding:18px 16px;line-height:1.3;text-transform:uppercase;}
+#view-student .mdx-price-card .mpc-val{background:#fff;color:var(--ink);font-weight:800;font-size:24px;padding:20px 16px;text-align:center;}
+
+/* detail cards */
+#view-student .detail-card{box-shadow:0 4px 14px rgba(0,0,0,0.06);}
+#view-student .detail-card h3{color:var(--ink);text-transform:none;}
+#view-student .mdx-chev-list{list-style:none;}
+#view-student .mdx-chev-list li{padding:8px 0 8px 24px;position:relative;font-size:14.5px;color:var(--ink);}
+#view-student .mdx-chev-list li::before{content:"\203A";position:absolute;left:0;top:6px;color:var(--maroon);font-weight:900;font-size:18px;}
+
+/* schedule table plain */
+#view-student table.split-table th{background:#fff;color:var(--ink);border:1px solid var(--line);font-weight:700;}
+#view-student table.split-table td{border:1px solid var(--line);}
+
+/* programme groups stacked, not grid */
+#view-student .ceremony-groups{display:block;}
+#view-student .cgroup{background:transparent;border:none;padding:18px 0;border-bottom:1px solid var(--line);}
+#view-student .cgroup .cg-title{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:10px;}
+#view-student .cgroup ul{list-style:none;}
+#view-student .cgroup li{padding:8px 0 8px 24px;position:relative;font-size:14.5px;color:var(--ink);}
+#view-student .cgroup li::before{content:"\203A";position:absolute;left:0;top:6px;color:var(--maroon);font-weight:900;font-size:18px;}
+
+/* class of 2025 video band */
+#view-student .mdx-video-band{background:#F2F2F2;padding:44px 0;margin:20px 0;}
+#view-student .mdx-video-band h2{font-size:28px;font-weight:800;text-transform:uppercase;color:var(--ink);margin-bottom:4px;}
+#view-student .mdx-video-band p{color:var(--ink-soft);margin-bottom:18px;}
+#view-student .mdx-video-band .mdx-video-frame{position:relative;width:100%;padding-top:56.25%;border-radius:6px;overflow:hidden;}
+#view-student .mdx-video-band .mdx-video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
+/* accordion-style venue parking */
+#view-student .mdx-accordion{background:#F2F2F2;padding:36px 0;}
+#view-student .mdx-accordion-head{display:flex;align-items:center;justify-content:space-between;font-size:20px;font-weight:800;text-transform:uppercase;color:var(--ink);border-bottom:1px solid #ddd;padding-bottom:14px;margin-bottom:16px;}
+#view-student .mdx-accordion-head .toggle{color:var(--maroon);font-size:22px;font-weight:900;}
+
+/* important to note - red outline card */
+#view-student .notice-box{background:#fff;border:2px solid var(--maroon);color:var(--ink);border-radius:6px;}
+#view-student .notice-box strong{color:var(--maroon);}
+#view-student .notice-box a{color:var(--maroon);}
+
+/* footer */
+#view-student .footer{background:#000;color:#fff;text-align:left;padding:40px 0;}
+#view-student .footer .mdx-footer-links{font-size:13.5px;line-height:2.2;}
+#view-student .footer .mdx-footer-links a{color:#fff;text-decoration:none;}
+#view-student .footer .mdx-footer-links a:hover{color:var(--maroon-light);}
+#view-student .footer .mdx-footer-copy{margin-top:24px;font-size:11.5px;color:#999;text-align:center;}
 </style>
 </head>
 <body>
@@ -267,46 +386,62 @@ tr:hover td{background:#FBF9F4;}
 <!-- ================= STUDENT / PUBLIC VIEW ================= -->
 <div id="view-student" class="view active">
 
-  <div class="util-bar">
-    <div class="wrap"><a href="#" onclick="setMode('admin');return false;">Staff &amp; Admin Login</a></div>
-  </div>
-
-  <div class="hero">
+  <div class="mdx-nav">
     <div class="wrap">
-      <div class="hero-text">
-        <h1>GRADUATION</h1>
-        <h2>Middlesex University Dubai</h2>
-        <h3>Class of 2026</h3>
+      <div class="mdx-nav-brand">
+        <img src="https://api.mdx.ac.ae/uploads/Logo_1_68b1d26bac.png" alt="Middlesex University Dubai logo">
       </div>
-      <div class="mdx-logo-box">
-        <img src="https://api.mdx.ac.ae/uploads/logo_mdx_95d90243df.png" alt="Middlesex University Dubai logo">
+      <div class="mdx-nav-right">
+        <a href="#" class="mdx-admin-link" onclick="setMode('admin');return false;">Staff &amp; Admin Login</a>
+        <a href="#" class="mdx-pill" onclick="return false;">Online Payment</a>
       </div>
     </div>
   </div>
 
-  <div class="info-strip">
+  <div class="mdx-hero">
     <div class="wrap">
-      <div class="info-grid">
-        <div class="info-item">
-          <div class="lbl">Date</div>
-          <div class="val">17 &amp; 18 October 2026</div>
-          <div class="sub">Saturday &amp; Sunday</div>
-        </div>
-        <div class="info-item">
-          <div class="lbl">Location</div>
-          <div class="val">Atlantis The Royal</div>
-          <div class="sub">Palm Jumeirah, Dubai</div>
-        </div>
-        <div class="info-item">
-          <div class="lbl">Schedule</div>
-          <div class="val">4 Ceremonies</div>
-          <div class="sub">Full timings listed below</div>
-        </div>
-      </div>
+      <div class="eyebrow">Graduation</div>
+      <h1>Class of 2026</h1>
     </div>
   </div>
 
   <div class="wrap">
+    <div class="mdx-info-row">
+      <div class="mdx-info-box">
+        <div class="icon">&#128197;</div>
+        <div class="lbl">Date</div>
+        <div class="val">Saturday 17 &ndash; Sunday 18 October 2026</div>
+      </div>
+      <div class="mdx-info-box">
+        <div class="icon">&#128205;</div>
+        <div class="lbl">Location</div>
+        <div class="val">Atlantis The Royal</div>
+      </div>
+    </div>
+
+    <div class="mdx-eligibility-row">
+      <div class="mdx-eligibility-box">
+        <div class="mdx-elig-head">Check Your Eligibility &amp; Purchase Tickets</div>
+        <div class="mdx-elig-body">
+          <div class="portal-card" id="ticket-flow"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdx-almost">
+      <h2>Graduation 2026 is Almost Here!</h2>
+      <p>Get ready to celebrate! You are our biggest graduating class to date!</p>
+      <p>The first ceremonies will be taking place on <strong>17&ndash;18 October 2026</strong> at the breathtaking, world-renowned <strong>Atlantis The Royal</strong>, one of Dubai&rsquo;s most iconic landmarks and the perfect stage for a celebration of achievement for all our graduates!</p>
+      <p>This event is open to all eligible graduates from undergraduate programmes and the daytime MBA programme (April 2025 intake only). Graduation dates for postgraduate programmes and other daytime MBA cohorts will be announced very soon.</p>
+      <p>We can&rsquo;t wait to celebrate this milestone with you, your families, and friends in a setting worthy of the occasion.</p>
+      <img src="https://api.mdx.ac.ae/uploads/atlantis_the_royal_f41eabe030.jpg" alt="Atlantis The Royal">
+      <div class="mdx-red-box">
+        <h3>Ticket Sales</h3>
+        <p>Tickets are available from <strong>Wednesday 15 July 2026</strong>.</p>
+        <p>The ticket deadline for the October ceremonies will be <strong>Thursday 10 September 2026</strong>.</p>
+      </div>
+    </div>
+
     <div class="feb-notice">
       <strong>February 2027 Ceremony:</strong> Further information to be disclosed soon. Ticket sales are not yet live.
     </div>
@@ -315,32 +450,30 @@ tr:hover td{background:#FBF9F4;}
   <div class="section">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Ticket Sales</div>
-        <h2>Check Your Eligibility &amp; Purchase Tickets</h2>
-        <p class="desc">Every eligible graduate may initially purchase up to 2 guest tickets. Should further tickets be available, we shall let you know. Tickets are non-refundable once purchased.</p>
+        <h2>Graduation Ticket Prices</h2>
       </div>
 
-      <div class="portal-shell">
-        <div class="window-banner">
-          Tickets are available from <strong>Wednesday 15 July 2026</strong>. The purchase deadline for the October ceremonies is <strong>Thursday 10 September 2026</strong>.
-        </div>
-
-        <div class="price-ref">
-          <div class="pr-item"><div class="pr-lbl">Graduate Only</div><div class="pr-val">325</div></div>
-          <div class="pr-item"><div class="pr-lbl">Guest Only</div><div class="pr-val">375</div></div>
-          <div class="pr-item"><div class="pr-lbl">Grad + 1 Guest</div><div class="pr-val">700</div></div>
-          <div class="pr-item"><div class="pr-lbl">Grad + 2 Guests</div><div class="pr-val">1075</div></div>
-        </div>
-
-        <div class="portal-card" id="ticket-flow"></div>
+      <div class="mdx-red-box">
+        <h3>Important Ticket Information</h3>
+        <p>Every eligible graduate will initially be permitted to purchase up to 2 guest tickets.</p>
+        <p>Due to anticipated demand, guest ticket allocations are limited at this stage. Should additional tickets become available, they will be released at a later date and we will communicate this to graduates at that time.</p>
+        <p>In the meantime, please do not attempt to purchase more than 2 guest tickets, as the surplus balance will be refunded to you and you will not be issued the additional ticket(s).</p>
       </div>
+
+      <div class="mdx-price-grid">
+        <div class="mdx-price-card"><div class="mpc-head">Graduate Only</div><div class="mpc-val">AED 325</div></div>
+        <div class="mdx-price-card"><div class="mpc-head">Guest Only</div><div class="mpc-val">AED 375</div></div>
+        <div class="mdx-price-card"><div class="mpc-head">Graduate + 1 Guest</div><div class="mpc-val">AED 700</div></div>
+        <div class="mdx-price-card"><div class="mpc-head">Graduate + 2 Guests</div><div class="mpc-val">AED 1075</div></div>
+      </div>
+      <p style="font-size:14.5px;color:var(--ink-soft);line-height:1.75;">Children under the age of four attending with their family may enter the graduation ceremony free of charge; however, they will not be allocated a seat and must be seated with a parent or guardian throughout the ceremony.</p>
+      <p style="font-size:14.5px;color:var(--ink-soft);line-height:1.75;">The deadline to purchase tickets is <strong>Thursday 10 September 2026</strong>.</p>
     </div>
   </div>
 
   <div class="section alt">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Before You Attend</div>
         <h2>Further Details</h2>
       </div>
 
@@ -431,14 +564,8 @@ tr:hover td{background:#FBF9F4;}
         </div>
 
         <div class="detail-card">
-          <h3>Venue &amp; Parking</h3>
-          <p>Traffic on the Palm is busy at weekends — please allow plenty of time, as latecomers cannot be admitted once doors close. Arriving by public transport is encouraged.</p>
-          <p>Free valet parking is available on a first-come, first-served basis at Atlantis The Royal for the duration of your ceremony — go to the Conference Centre entrance to request it.</p>
-        </div>
-
-        <div class="detail-card">
           <h3>Things to Keep in Mind</h3>
-          <ul class="mind-list">
+          <ul class="mdx-chev-list">
             <li>Guest tickets can only be purchased after the graduate ticket has been bought.</li>
             <li>Maximum 1 graduate ticket and 2 guest tickets per student, at this stage.</li>
             <li>Do not attempt to purchase more than 2 guest tickets — any surplus balance will be refunded and no extra ticket issued.</li>
@@ -448,16 +575,49 @@ tr:hover td{background:#FBF9F4;}
           </ul>
         </div>
 
-        <div class="notice-box">
-          <strong>Important to note:</strong> Communications about Graduation Class of 2026 are for planning purposes only and are not formal confirmation of award. Only students formally awarded their qualification, having met all academic and regulatory requirements, may attend. Formal confirmation of award is issued separately via MyMDX — attending a ceremony, appearing in ceremony materials, purchasing gowns, or event photography does not constitute evidence of graduation.
-        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="mdx-video-band">
+    <div class="wrap">
+      <h2>Class of 2025</h2>
+      <p>What you have to look forward to!</p>
+      <div class="mdx-video-frame">
+        <iframe src="https://www.youtube.com/embed/QmbAUTZvJRk" title="Class of 2025" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="mdx-accordion">
+    <div class="wrap">
+      <div class="mdx-accordion-head"><span>Venue Parking</span><span class="toggle">&minus;</span></div>
+      <p style="font-size:14.5px;color:var(--ink);line-height:1.75;margin-bottom:14px;">Please note that traffic on the Palm is extremely busy at the weekends so please ensure you leave plenty of time to arrive for your ceremony as you cannot arrive late.</p>
+      <p style="font-size:14.5px;color:var(--ink);line-height:1.75;margin-bottom:14px;">We encourage you to arrive by public transport to avoid traffic and delays.</p>
+      <h4 style="font-size:15px;font-weight:800;margin-bottom:8px;">Valet Parking</h4>
+      <p style="font-size:14.5px;color:var(--ink);line-height:1.75;">There will be free valet parking available on a first-come, first-served basis at Atlantis, The Royal for the duration of your graduation ceremony. Please go to the Conference Centre entrance to request the valet service.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="notice-box" style="padding:24px 26px;">
+        <strong>Important to note:</strong> Communications about Graduation Class of 2026 are for planning purposes only and are not formal confirmation of award. Only students formally awarded their qualification, having met all academic and regulatory requirements, may attend. Formal confirmation of award is issued separately via MyMDX — attending a ceremony, appearing in ceremony materials, purchasing gowns, or event photography does not constitute evidence of graduation.
       </div>
     </div>
   </div>
 
   <div class="footer">
-    Middlesex University Dubai · Dubai Knowledge Park, Blocks 15, 16, 17 &amp; 19 · Graduation Office · Class of 2026
+    <div class="wrap">
+      <div class="mdx-footer-links">
+        <div style="font-weight:800;color:#fff;font-size:16px;margin-bottom:12px;">Quick Links</div>
+        Study &nbsp;·&nbsp; Life at University &nbsp;·&nbsp; International &nbsp;·&nbsp; Research &nbsp;·&nbsp; Business &amp; Partnerships &nbsp;·&nbsp; Alumni
+      </div>
+      <div class="mdx-footer-copy">
+        Middlesex University Dubai &middot; Dubai Knowledge Park, Blocks 15, 16, 17 &amp; 19 &middot; Graduation Office &middot; Class of 2026<br>
+        &copy; Copyright Middlesex University Dubai 2026
+      </div>
+    </div>
   </div>
 </div>
 
