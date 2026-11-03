@@ -1,0 +1,35 @@
+name: Graduation system - apply database migrations
+
+# Run by hand: Actions -> "Graduation system - apply database migrations" -> Run workflow.
+# Needs the repository secret DATABASE_URL_DIRECT (direct connection, port 5432).
+on:
+  workflow_dispatch:
+    inputs:
+      seed_demo:
+        description: 'Also load the fictional demo data (testing environment only)'
+        type: boolean
+        default: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: graduation-system
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install pg@8 --no-save --no-audit --no-fund
+      - name: Apply migrations
+        run: node scripts/migrate.mjs
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL_DIRECT }}
+          DATABASE_SSL: require
+      - name: Load demo data
+        if: ${{ inputs.seed_demo }}
+        run: node scripts/seed.mjs
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL_DIRECT }}
+          DATABASE_SSL: require

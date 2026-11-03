@@ -1,0 +1,33 @@
+name: Graduation system CI
+
+on:
+  push:
+    branches: [main]
+    paths: ['graduation-system/**', '.github/workflows/graduation-ci.yml']
+  pull_request:
+    paths: ['graduation-system/**', '.github/workflows/graduation-ci.yml']
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: graduation-system
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install
+        run: if [ -f package-lock.json ]; then npm ci; else npm install --no-audit --no-fund; fi
+      - name: Business-rule tests (in-memory PostgreSQL)
+        run: npm run test:db
+      - name: Type check
+        run: npm run typecheck
+      - name: Build
+        run: npm run build
+        env:
+          DATABASE_URL: postgresql://ci:ci@localhost:5432/ci
+          NEXT_PUBLIC_SITE_URL: https://example.com
+          APP_SECRET: ci-placeholder-secret-0123456789-abcdefghij
+          NEXT_TELEMETRY_DISABLED: '1'

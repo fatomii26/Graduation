@@ -20,3 +20,10 @@ npx serve .
 ## Demo student IDs
 
 See the "Demo IDs" note on the student ticket entry screen for sample MISIS numbers covering different states (eligible, maxed out, financial hold, finalist, etc.).
+
+## Full system
+
+The complete graduation ticketing system (Next.js + PostgreSQL, zones, payments, e-tickets, scanning, back office) is in
+[`graduation-system/`](graduation-system/README.md). Its README has the setup steps for Supabase, Vercel, GitHub,
+Microsoft sign-in and CCAvenue.
+
